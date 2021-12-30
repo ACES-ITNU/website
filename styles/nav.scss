@@ -1,0 +1,103 @@
+nav {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 5vw;
+    right: 0.3vw;
+    .logo {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65%;
+            margin: 0 auto;
+        }
+    }
+    ul {
+        width: 60%;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .menubutton {
+        position: absolute;
+        left: 3vw;
+        top: 0vw;
+        z-index: 10;
+        border: none;
+        font-size: 5vw;
+        cursor: pointer;
+        background: transparent;
+        .icon {
+            height: 2vw;
+            *{
+                color: rgb(228, 87, 31);
+            }
+        }
+    }
+    #menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 7vw;
+        width: 20%;
+        transition: 1s all ease-in-out;
+        height: 100vh;
+        background: rgb(1, 8, 27);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        ul {
+            width: 90%;
+            margin: 2vw auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            li {
+                font-size: 1.2vw;
+                font-weight: 300;
+                padding: 0.2vw 1vw;
+                color: white;
+                margin: 1vw 0;
+            }
+            li.normal {
+                &:hover {
+                    cursor: pointer;
+                    border-radius: 0.5vw;
+                    background: rgb(228, 87, 31);
+                    color: white;
+                    transition: 1s ease-in-out all;
+                }
+            }
+            li.active {
+                border-bottom: 0.01vw solid rgb(228, 87, 31);
+                color: rgb(228, 87, 31);
+            }
+        }
+    }
+}
+
+@keyframes hoverEffect {
+    0% {
+        border-bottom: 0.01vw solid white;
+        color: white;
+    }
+    100% {
+        border-bottom: 0.01vw solid rgb(228, 87, 31);
+        color: rgb(228, 87, 31);
+    }
+}

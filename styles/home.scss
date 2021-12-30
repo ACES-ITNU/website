@@ -1,0 +1,83 @@
+#home {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    height: 100vh;
+    overflow-y: scroll;
+    .left {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        .leftElem {
+            width: 50%;
+            padding: 0;
+            padding-top: 3.5vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .tilt {
+                border-radius: 0.5vw;
+            }
+            h1 {
+                font-size: 15vw;
+                font-weight: 400;
+                font-family: 'Montserrat';
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                align-items: center;
+                font-size: 1.7vw;
+                margin: 0;
+                font-family: 'Montserrat';
+                span {
+                    color: rgb(228, 87, 31);
+                    font-size: 2.8vw;
+                    font-family: 'Montserrat';
+                }
+            }
+            .tags {
+                width: 100%;
+                border-radius: 1vw;
+                padding: 0;
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    margin: 2vw auto;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    margin: 0;
+                }
+                ul, li {
+                    list-style: none;
+                }
+                ul {
+                    padding-top: 4vw;
+                }
+                li {
+                    padding: 0.5vw 1vw;
+                    background: rgb(228, 87, 31);
+                    margin: 0.5vw 1vw 0.5vw 0;
+                    border-radius: 4vw; 
+                    font-size: 1vw;
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .graphic {
+            padding-top: 3vw;
+            width: 30%;
+        }
+    }
+}
