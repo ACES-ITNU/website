@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import graphicImage from '../images/graphic1.png'
 
@@ -23,7 +24,23 @@ export default function Home(props) {
         zIndex: menu ? 12 : 1,
       }}>
         <div className='left'>
-            <div className='leftElem'>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  x: "-100%"
+                },
+                visible: {
+                  x:0,
+                  transition: {
+                    default: {
+                      duration: 1
+                    }
+                  }
+                }
+              }}
+             className='leftElem'>
               <Tilt className='tilt'>
                 <h1>ACES</h1>
                 <p><span>A</span>ssociation of <span>C</span>omputer <span>E</span>ngineering <span>S</span>tudents</p>
@@ -37,8 +54,24 @@ export default function Home(props) {
                   <li><span>Overall Development of Students</span></li>
                 </ul>
             </div>
-          </div>
-          <img className="graphic" src={graphicImage.src} />
+          </motion.div>
+          <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              x: "100%"
+            },
+            visible: {
+              x:0,
+              transition: {
+                default: {
+                  duration: 1
+                }
+              }
+            }
+          }}
+          className="graphic" src={graphicImage.src} />
         </div>
       </main>
     </div>

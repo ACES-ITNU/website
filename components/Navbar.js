@@ -2,13 +2,30 @@ import React from 'react'
 import logo from "../images/Logo.png"
 import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = (props) => {
     const {active, menu, setmenu} = props
     return (
-        <nav>
+        <motion.nav
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            y: "-300%"
+          },
+          visible: {
+            y:0,
+            transition: {
+              default: {
+                duration: 1
+              }
+            }
+          }
+        }}
+        >
             <button style={{display: menu ? "block" : "none"}} className="menubutton" onClick={() => setmenu(!menu)}><FontAwesomeIcon icon={faTimes} className='icon'/></button>
             <button style={{display: menu ? "none" : "block"}} className="menubutton" onClick={() => setmenu(!menu)}><FontAwesomeIcon icon={faBars} className='icon'/></button>
             <div id="menu" style={{
@@ -27,7 +44,7 @@ const Navbar = (props) => {
                     </Tilt>
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 export default Navbar
