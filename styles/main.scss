@@ -63,6 +63,7 @@ main {
     position: absolute;
     padding: 0;
     transition: all 1s ease-in-out;
+    z-index: 1 !important;
 }
 main.diff {
     background: rgba(1, 8, 27, 0.8);

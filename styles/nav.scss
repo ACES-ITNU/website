@@ -19,6 +19,7 @@ nav {
             align-items: center;
             width: 65%;
             margin: 0 auto;
+            cursor: pointer;
         }
     }
     ul {
@@ -91,13 +92,79 @@ nav {
     }
 }
 
-@keyframes hoverEffect {
-    0% {
-        border-bottom: 0.01vw solid white;
-        color: white;
-    }
-    100% {
-        border-bottom: 0.01vw solid rgb(228, 87, 31);
-        color: rgb(228, 87, 31);
+@media only screen and (max-width: 600px) {
+    nav {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 5vw;
+        right: 0.3vw;
+        .logo {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vw;
+            img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 65%;
+                margin: 0 auto;
+            }
+        }
+        ul {
+            width: 60%;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .menubutton {
+            position: absolute;
+            left: 3vw;
+            top: 3vw;
+            z-index: 10;
+            border: none;
+            font-size: 5vw;
+            cursor: pointer;
+            background: transparent;
+            .icon {
+                height: 5vw;
+                *{
+                    color: rgb(228, 87, 31);
+                }
+            }
+        }
+        #menu {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-top: 7vw;
+            width: 100%;
+            transition: 1s all ease-in-out;
+            height: 100vh;
+            ul {
+                width: 90%;
+                margin: 2vw auto;
+                li {
+                    font-size: 4vw;
+                    font-weight: 400;
+                    padding: 1vw 2vw;
+                    margin: 3vw 0;
+                }
+                li.normal {
+                    &:hover {
+                        border-radius: 1.2vw;
+                    }
+                }
+            }
+        }
     }
 }

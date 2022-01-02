@@ -19,6 +19,7 @@ const Navbar = (props) => {
           visible: {
             y:0,
             transition: {
+              delay: 1,
               default: {
                 duration: 1
               }
