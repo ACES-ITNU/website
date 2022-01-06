@@ -143,10 +143,12 @@
                 .image {
                     width: 20vw;
                     height: 20vw;
-                    object-fit: cover;
                     margin: 0.5vw auto;
                     img {
-                        width: 100%;
+                        object-fit: cover;
+                        object-position: center left;
+                        width: 20vw;
+                        height: 20vw;
                         margin: 0 auto;
                     }
                     .details {
@@ -160,7 +162,6 @@
                         align-items: center;
                         position: absolute;
                         background: rgba(255,255,255,0.7);
-                        // background: rgba(0,0,0,0.5);
                         .left {
                             h1 {
                                 font-size: 0.8vw;
@@ -354,7 +355,6 @@
                     .image {
                         width: 20vw;
                         height: 20vw;
-                        object-fit: cover;
                         margin: 0.5vw auto;
                         img {
                             width: 100%;

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Link from 'next/link';
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
@@ -74,6 +75,13 @@ export default function Home(props) {
           className="graphic" src={graphicImage.src} />
         </div>
       </main>
+      {/* <ul id="pageMenu">
+          <li className={active==0 ? "active" : "normal"}><div></div></li>
+          <li className={active==1 ? "active" : "normal"}><div></div></li>
+          <li className={active==2 ? "active" : "normal"}><div></div></li>
+          <li className={active==3 ? "active" : "normal"}><div></div></li>
+          <li className={active==4 ? "active" : "normal"}><div></div></li>
+      </ul> */}
     </div>
   )
 }

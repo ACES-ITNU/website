@@ -14,12 +14,14 @@ const Navbar = (props) => {
         animate="visible"
         variants={{
           hidden: {
-            y: "-300%"
+            // x: "-300%",
+            y: "-500%"
           },
           visible: {
+            // x:0,
             y:0,
             transition: {
-              delay: 1,
+              delay: 0,
               default: {
                 duration: 1
               }
@@ -45,6 +47,20 @@ const Navbar = (props) => {
                     </Tilt>
                 </div>
             </div>
+            {/* <div id="menu">
+                <ul>
+                    <li className={active==0 ? "active" : "normal"}><Link href="/">Home</Link></li>
+                    <li className={active==1 ? "active" : "normal"}><Link href="/about">About</Link></li>
+                    <li className={active==2 ? "active" : "normal"}><Link href="/team">Team</Link></li>
+                    <li className={active==3 ? "active" : "normal"}><Link href="/events">Events</Link></li>
+                    <li className={active==4 ? "active" : "normal"}><Link href="/contact">Contact</Link></li>
+                </ul>
+                <div className='logo'>
+                    <Tilt>                
+                        <Link href="/"><img src={logo.src} /></Link>
+                    </Tilt>
+                </div>
+            </div> */}
         </motion.nav>
     )
 }
