@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+// import '../styles/globals.css'
 import '../styles/main.scss'
 import '../styles/nav.scss'
 import '../styles/home.scss'
