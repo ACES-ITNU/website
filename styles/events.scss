@@ -128,6 +128,7 @@
             flex-wrap: wrap;
             flex: 0 0 50%;
             
+            
 
             *{
                 z-index: 3;
@@ -154,6 +155,8 @@
                 div{
                     // flex: 1;
                     flex: 0 0 50%;
+                    font-size: 1.1rem;
+                    // font-weight: bold;
                 }
             }
             .left-time{
@@ -218,10 +221,10 @@
                 *{
                     flex: 0 0 50%;
                     padding: .5rem;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
 
-                button{
+                a{
 
                     background-color: rgb(228, 87, 31);
                     border: none;
@@ -229,7 +232,10 @@
                     outline: none;
                     cursor: pointer;
                     color: white;
-                    font-size: 1rem;
+                    text-decoration: none;
+                    text-align: center;
+                    // font-size: 1rem;
+                    
                 }
 
 
