@@ -14,6 +14,8 @@
 
 ACES-animation.html
 
+.env
+
 # production
 /build
 
