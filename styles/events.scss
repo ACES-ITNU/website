@@ -101,7 +101,7 @@
 
     .item{
         display: flex;
-        max-height: 30rem;
+        // max-height: 30rem;
         flex: 1;
         padding: 1.5rem;
         border: 0px solid;
@@ -244,5 +244,36 @@
 
 
         }
+    }
+}
+
+@media only screen and (max-width: 900px){
+
+    .Events{
+
+        width: 80%;
+
+
+
+        
+        
+        .item{
+            flex-direction: column;
+            height:fit-content;
+
+            .left_item{
+
+                .left-info{
+
+                   flex-direction: column;
+                }
+                
+            }
+
+            .right-item{
+                margin-top: 2rem;
+            }
+        }
+        
     }
 }

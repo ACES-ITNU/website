@@ -145,9 +145,9 @@ function EventList() {
       }
     }
 
-    setLive(l);
+    setLive(l.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
     setPast(p);
-    setUpComing(u);
+    setUpComing(u.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
 
   }
 

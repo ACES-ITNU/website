@@ -83,7 +83,49 @@ const events = [
             `Hello there, everyone!! Prepare for the action-packed Among Us competition! Surely you've all had some excellent brainstorming and ideation sessions.`
             , `“You’ve got to stay focused without being boring - because all work and no play makes Jack a dull boy ” It's now time to have some fun and play some games. If you haven't participated in website making competition still you can participate in this. In the Discord Among Us channel, we will share the Joining Code there.`
         ],
+        'time':[2022,0,8,20,17],
+        'join_link':'#',
+        'is_online':true,
+        'by_who':'ACES',
+        'duration':1
+
+    },
+    {
+
+        'title': 'Among Us',
+        'about': [
+            `Hello there, everyone!! Prepare for the action-packed Among Us competition! Surely you've all had some excellent brainstorming and ideation sessions.`
+            , `“You’ve got to stay focused without being boring - because all work and no play makes Jack a dull boy ” It's now time to have some fun and play some games. If you haven't participated in website making competition still you can participate in this. In the Discord Among Us channel, we will share the Joining Code there.`
+        ],
+        'time':[2022,0,8,21,0],
+        'join_link':'#',
+        'is_online':true,
+        'by_who':'ACES',
+        'duration':1
+
+    },
+    {
+
+        'title': 'Among Us',
+        'about': [
+            `Hello there, everyone!! Prepare for the action-packed Among Us competition! Surely you've all had some excellent brainstorming and ideation sessions.`
+            , `“You’ve got to stay focused without being boring - because all work and no play makes Jack a dull boy ” It's now time to have some fun and play some games. If you haven't participated in website making competition still you can participate in this. In the Discord Among Us channel, we will share the Joining Code there.`
+        ],
         'time':[2022,0,8,15,17],
+        'join_link':'#',
+        'is_online':true,
+        'by_who':'ACES',
+        'duration':1
+
+    },
+    {
+
+        'title': 'Among Us',
+        'about': [
+            `Hello there, everyone!! Prepare for the action-packed Among Us competition! Surely you've all had some excellent brainstorming and ideation sessions.`
+            , `“You’ve got to stay focused without being boring - because all work and no play makes Jack a dull boy ” It's now time to have some fun and play some games. If you haven't participated in website making competition still you can participate in this. In the Discord Among Us channel, we will share the Joining Code there.`
+        ],
+        'time':[2022,0,8,20,27],
         'join_link':'#',
         'is_online':true,
         'by_who':'ACES',
