@@ -6,6 +6,7 @@ import { faFacebook, faFacebookSquare, faInstagram, faLinkedin } from '@fortawes
 import cont1 from '../images/cont1.png'
 import cont2 from '../images/cont2.png'
 import cont3 from '../images/cont3.png'
+import Footer from '../components/Footer'
 
 export default function Home(props) {
   const {active, setactive, menu, setmenu} = props
@@ -68,6 +69,7 @@ export default function Home(props) {
         </div>
         {/* <img id="cont1" src={cont1.src} />
         <img id="cont2" src={cont2.src} /> */}
+        <Footer/>
       </main>
     </div>
   )

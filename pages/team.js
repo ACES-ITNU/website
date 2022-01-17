@@ -24,6 +24,7 @@ import img16 from '../images/board/Yash Savani - Editor.jpg'
 
 
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../components/Footer';
 
 export default function Team(props) {
   const {active, setactive, menu, setmenu} = props
@@ -255,6 +256,7 @@ export default function Team(props) {
                 </div>
             </div>
         </div>
+        {/* <Footer/> */}
       </main>
     </div>
   )

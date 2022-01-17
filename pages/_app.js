@@ -1,5 +1,6 @@
 import '../styles/main.scss'
 import '../styles/nav.scss'
+import '../styles/footer.scss'
 import '../styles/home.scss'
 import '../styles/about.scss'
 import '../styles/team.scss'

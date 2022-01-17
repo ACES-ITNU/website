@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faArrowCircleDown, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
+import Footer from '../components/Footer'
 
 export default function Home(props) {
   const {active, setactive, menu, setmenu} = props
@@ -62,7 +63,7 @@ export default function Home(props) {
         }}>
           <img src="./roadmap.png"/>
         </div>
-
+        <Footer/>
       </main>
     </div>
   )
