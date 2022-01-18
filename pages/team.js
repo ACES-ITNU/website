@@ -96,7 +96,7 @@ export default function Team(props) {
                                         <h1>Aayush Shah</h1>
                                         <h3>Graphic Designer</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/rohan-hadvani-aa159b153"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/aayushtheapple/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img1.src} />
                             </div>
@@ -106,7 +106,7 @@ export default function Team(props) {
                                         <h1>Akshat Shah</h1>
                                         <h3>Organizing Secretary</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/janmejay-shastri-7658a7193/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/akshat-shah-a129a01a7/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img2.src} />
                             </div>
@@ -116,7 +116,7 @@ export default function Team(props) {
                                         <h1>Ansh Ray</h1>
                                         <h3>Relations Officer</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/aditya-sahoo12"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/ansh-ray-092668205/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img3.src} />
                             </div>
@@ -126,7 +126,7 @@ export default function Team(props) {
                                         <h1>Gaurav Sakariya</h1>
                                         <h3>Creative Head</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/devanshi-patel-93a6641ba/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/gaurav-sakariya-7354051b2/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img4.src} />
                             </div>
@@ -136,7 +136,7 @@ export default function Team(props) {
                                         <h1>Kalp Mepani</h1>
                                         <h3>Treasurer</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/kalp-mepani-5350671a2/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img5.src} />
                             </div>
@@ -146,7 +146,7 @@ export default function Team(props) {
                                         <h1>Kanisha Shah</h1>
                                         <h3>President</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/kanisha-shah97/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img6.src} />
                             </div>
@@ -156,7 +156,7 @@ export default function Team(props) {
                                         <h1>Kunj Thakkar</h1>
                                         <h3>General Secretary</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/kunj-thakkar-b654041b2/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img7.src} />
                             </div>
@@ -166,7 +166,7 @@ export default function Team(props) {
                                         <h1>Manan Patel</h1>
                                         <h3>Joint Secretary</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/manan-patel-0299a9202/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img8.src} />
                             </div>
@@ -176,7 +176,7 @@ export default function Team(props) {
                                         <h1>Meet Vora</h1>
                                         <h3>Vice President</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/meet-vora-6573651b2/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img9.src} />
                             </div>
@@ -186,7 +186,7 @@ export default function Team(props) {
                                         <h1>Mrunal Shah</h1>
                                         <h3>Director General</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/mrunal-shah-88118419a/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img10.src} />
                             </div>
@@ -196,7 +196,7 @@ export default function Team(props) {
                                         <h1>Naman Thaker</h1>
                                         <h3>Managing director</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/naman-thaker-50b46a190/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img11.src} />
                             </div>
@@ -206,7 +206,7 @@ export default function Team(props) {
                                         <h1>Sachi Chaudhary</h1>
                                         <h3>Marketing Director</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/sachi-chaudhary-49b2041a0/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img12.src} />
                             </div>
@@ -216,7 +216,7 @@ export default function Team(props) {
                                         <h1>Savan Vaghani</h1>
                                         <h3>Membership Chair</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/savan-vaghani-12a928195/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img13.src} />
                             </div>
@@ -226,7 +226,7 @@ export default function Team(props) {
                                         <h1>Shivam Panchal</h1>
                                         <h3>Technical Head</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/shivam-panchal-3947391b0/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img14.src} />
                             </div>
@@ -236,7 +236,7 @@ export default function Team(props) {
                                         <h1>Yagnik Thummar</h1>
                                         <h3>Technical Head</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/yagnikthummar/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img15.src} />
                             </div>
@@ -246,7 +246,7 @@ export default function Team(props) {
                                         <h1>Yash Savani 16</h1>
                                         <h3>Editor</h3>
                                     </div>
-                                    <a href="https://www.linkedin.com/in/parshva-shah-402940177"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/sr-yashsavani/"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                                 </div>
                                 <img src={img16.src} />
                             </div>
