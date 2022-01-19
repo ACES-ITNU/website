@@ -12,6 +12,10 @@
 /.next/
 /out/
 
+ACES-animation.html
+
+.env
+
 # production
 /build
 

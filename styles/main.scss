@@ -13,12 +13,12 @@ body {
     background: white;
 }
 * {
-    color: black;
+    // color: black;
     box-sizing: border-box;
     font-family: 'Montserrat';
 
     &::-webkit-scrollbar {
-        width: 0.15vw;
+        width: 0.50vw;
     }
     
     /* Track */
