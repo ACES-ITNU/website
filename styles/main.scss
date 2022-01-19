@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* tailwindCSS utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background: white;
+}
+* {
+  // color: black;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+
+  &::-webkit-scrollbar {
+    width: 0.5vw;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(228, 87, 31);
+    transform: translateY(0);
+    z-index: 12;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(158, 53, 12);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  transition: all 1s ease-in-out;
+  z-index: 1 !important;
+}
+main.diff {
+  background: rgba(1, 8, 27, 0.8);
+  border-radius: 1vw;
+  box-shadow: inset 0 0 2vw 1vw rgba(0, 0, 0, 0.4);
+  h1,
+  p {
+    color: white;
+  }
+}
+.diff {
+  .team {
+    h1 {
+      color: white !important;
+    }
+    .item {
+      h1,
+      p {
+        color: black !important;
+      }
+      box-shadow: none !important;
+      border: none !important;
+      background: white !important;
+    }
+  }
+}
