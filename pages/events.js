@@ -65,8 +65,8 @@ export default function Home(props) {
           transform: down ? "translateY(-100vh)" : "translateY(0)"
         }}>
           <EventList></EventList>
+          <Footer/>
         </div>
-        <Footer/>
       </main>
     </div>
   )
