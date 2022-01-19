@@ -25,6 +25,7 @@ import img16 from '../images/board/Yash Savani - Editor.jpg'
 
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../components/Footer';
+import Faculty from '../components/Faculty';
 
 export default function Team(props) {
   const {active, setactive, menu, setmenu} = props
@@ -46,7 +47,8 @@ export default function Team(props) {
       }}>
         <div className='team'>
             <h1 className='heading'>ACES and Nirma University</h1>
-            <div className='faculty'>
+            <Faculty />
+            {/* <div className='faculty'>
                 <div className='item'>
                     <img src={director.src} />
                     <h1>Rajesh N Patel</h1>
@@ -71,7 +73,7 @@ export default function Team(props) {
                         Dr Rajesh Patel is working as Additional Director, School of Engineering, Institute of Technology. He has an experience of more than 27 years in the field of teaching, research and industry. He obtained his BE degree in Mechanical Engineering from REC, Surat in 1990
                     </p>
                 </div>
-            </div>
+            </div> */}
             <div className="teamSection">
                 <div className="imagePart">
                     <div className='content'>
