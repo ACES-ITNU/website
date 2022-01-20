@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowDown, faArrowUp} from '@fortawesome/free-solid-svg-icons'
 import Footer from '../components/Footer'
 
+
 export default function About(props) {
   const {active, setactive, menu, setmenu} = props
   const [downPos, setdownPos] = useState(false)
@@ -58,6 +59,7 @@ export default function About(props) {
 
         {/* Button to change the view */}
         <FontAwesomeIcon onClick={() => setdownPos(!downPos)} className={!downPos ? 'arrowicon orange' : 'arrowicon blue'} icon={!downPos? faArrowDown : faArrowUp} />
+
       </main>
     </div>
   )

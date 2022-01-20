@@ -7,6 +7,7 @@ import Tilt from 'react-parallax-tilt';
 import graphicImage from '../images/graphic1.png'
 import Footer from '../components/Footer';
 
+
 export default function Home(props) {
   const {active, setactive, menu, setmenu} = props
   useEffect(() => {
@@ -75,7 +76,9 @@ export default function Home(props) {
           }}
           className="graphic" src={graphicImage.src} />
         </div>
+
         <Footer />
+
       </main>
       {/* <ul id="pageMenu">
           <li className={active==0 ? "active" : "normal"}><div></div></li>

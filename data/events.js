@@ -32,7 +32,6 @@
  */
 
 
-
  const events = [
 
     {
@@ -183,9 +182,5 @@
         'duration': 2
 
     },
-
-
-
-
 ]
 export default events;
