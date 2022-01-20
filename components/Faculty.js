@@ -166,11 +166,11 @@ export default function Faculty() {
     return (
         <div className="facultyteam">
             <div className="absbutton">
-                <div className="left">
+                <div className="left center">
                     {/* <img onClick={prev} src="/left.png" /> */}
                     <FontAwesomeIcon className="imgicon" onClick={prev} icon={faChevronCircleLeft} />
                 </div>
-                <div className="right">
+                <div className="right center">
                     {/* <img onClick={next} src="/right.png" /> */}
                     <FontAwesomeIcon className="imgicon" onClick={next} icon={faChevronCircleRight} />
                 </div>

@@ -13,6 +13,7 @@
         background: rgba(0,0,0,0.7);
         h1 {
             font-size: 8vw;
+            font-size: 1.5rem;
             font-weight: 400;
             color: white;
             span {
@@ -101,6 +102,10 @@
 
     padding-bottom: 10vw;
 
+    h1{
+        font-size: 2rem;
+    }
+
 
     .item{
         display: flex;
@@ -116,6 +121,7 @@
         h1{
             z-index: 3;
             width: 90%;
+            font-size: 1.5rem;
             
             margin: 0 auto;
             margin-top: 3rem;

@@ -1,47 +1,44 @@
 
-
-// import { SMTPClient } from 'emailjs';
-// require('dotenv').config();
-// import nodemailer from 'nodemailer';
 import { SMTPClient } from 'emailjs';
 // import CheckMail from 'server/helpers/mail/checkemailhash';
 
 export default async function handler(req, res) {
-  
-  const {email,subject,message}=req.body;
-    const mymail=process.env.mail;
-    const password=process.env.password
 
-    // console.log(mymail,password);
+  const { email, name, message } = req.body;
+  const mymail = process.env.mail;
+  const password = process.env.password
 
-   
-      try{
-      const client = new SMTPClient({
-        user: mymail,
-        password: password,
-        host: 'smtp.gmail.com',
-        ssl: true,
-      });
+  // console.log(mymail,password);
 
-      await client.sendAsync(
+
+  try {
+    const client = new SMTPClient({
+      user: mymail,
+      password: password,
+      host: 'smtp.gmail.com',
+      ssl: true,
+    });
+
+    await client.sendAsync(
       {
         from: mymail,
         to: mymail,
-        subject: subject,
+        subject: `Contact Mail from ${name}`,
         text: `Email from: ${email} \n Message: ${message}`
-    
+
       }
     );
     await client.sendAsync(
       {
         from: mymail,
-            to: email,
-            
-            subject: 'From zeel codder',
-        
-        
-              attachment: [
-                { data: `<!DOCTYPE html>
+        to: email,
+
+        subject: 'From ACES',
+
+
+        attachment: [
+          {
+            data: `<!DOCTYPE html>
                 <html lang="en">
                 
                 <body>
@@ -59,7 +56,7 @@ export default async function handler(req, res) {
                             padding: 3px;
                             "
                             >
-                                xyz
+                            ACES
                             </a>
                 
                         </h1>
@@ -68,17 +65,17 @@ export default async function handler(req, res) {
                         font-size: 1.5rem;
                         padding: 3px;"
                         >
-                            xyz
+                        ACES
                         </p>
                         <h1>
-                        Thanks for Contact Me
+                        Thanks for Contact Us
             
                     </h1>
                         <button  style="background-color: blue;
                         outline: none;
                         border: none;
                         padding: 5px;" >
-                            <a href="#"
+                            <a href="https://aces-nirma.netlify.app/"
                             style="color: wheat;
                             font-size: 1.5rem;
                             font-weight: bold;
@@ -109,7 +106,7 @@ export default async function handler(req, res) {
                         
                         ">
                           
-                <p class="footer-para">All Copyright goes to © xyz</p>
+                <p class="footer-para">All Copyright goes to © ACES</p>
                 </div>
                 
                 
@@ -118,21 +115,20 @@ export default async function handler(req, res) {
                 </body>
                 
                 </html>`
-              
-              ,
-              alternative:true
-            }
-              ]
-           
-              
-            
-              
-    
+
+            ,
+            alternative: true
+          }
+        ]
+
+
+
+
+
       }
     );
-  } 
-  catch (e)
-  {
+  }
+  catch (e) {
     console.log(e)
 
     return res.status(404).end(JSON.stringify({
@@ -140,10 +136,10 @@ export default async function handler(req, res) {
 
     }))
   }
-         
-      
-      res.end(JSON.stringify({
-          message:"Both Mail send"
-      }))
-     
+
+
+  res.end(JSON.stringify({
+    message: "Both Mail send"
+  }))
+
 };

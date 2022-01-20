@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebook,
-  faFacebookSquare,
-  faInstagram,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
-import cont1 from '../images/cont1.png'
-import cont2 from '../images/cont2.png'
-import cont3 from '../images/cont3.png'
+import { data } from 'autoprefixer';
+const axios = require('axios');
+
+
+
 
 export default function Home(props) {
   const { active, setactive, menu, setmenu } = props
@@ -24,9 +19,55 @@ export default function Home(props) {
     message: '',
   })
 
+  const [LoadText, setLoadText] = useState('');
+
   const handleChange = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value })
   }
+
+  const SendEmail = () => {
+
+    setLoadText('Loading...');
+
+    axios.post('/api/contact_mail', details)
+      .then((data) => {
+
+        setLoadText('Send');
+        setDetails({
+          name: '',
+          email: '',
+          message: '',
+        })
+
+
+        setTimeout(() => {
+
+          setLoadText('');
+
+        }, 3000)
+
+      }).catch((data) => {
+
+        setLoadText('Error');
+        setDetails({
+          name: '',
+          email: '',
+          message: '',
+        })
+
+
+        setTimeout(() => {
+
+          setLoadText('');
+
+        }, 3000)
+
+      })
+
+  }
+
+
+
 
   return (
     <div>
@@ -103,7 +144,7 @@ export default function Home(props) {
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                     EMAIL
                   </h2>
-                  <a className="text-rose-700 leading-relaxed">
+                  <a className="text-orange-600 leading-relaxed">
                     xyz@nirmauni.ac.in
                   </a>
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
@@ -117,7 +158,7 @@ export default function Home(props) {
             </div>
             <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Feedback
+                Contact Us
               </h2>
               <p className="leading-relaxed mb-5 text-gray-800">
                 Provide your input!
@@ -133,7 +174,10 @@ export default function Home(props) {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full bg-slate-200 rounded border border-rose-600 focus:border-rose-500 focus:ring-2 focus:ring-rose-400 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-slate-200 rounded border border-orange-600 focus:border-orange-600 focus:ring-2 focus:ring-orange-600 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+
+                  onChange={(e) => handleChange(e)}
+                  value={details.name}
                 />
               </div>
               <div className="relative mb-4">
@@ -147,7 +191,9 @@ export default function Home(props) {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full bg-slate-200 rounded border border-rose-600 focus:border-rose-500 focus:ring-2 focus:ring-rose-400 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-slate-200 rounded border border-orange-600 focus:border-orange-600 focus:ring-2 focus:ring-orange-600 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  onChange={(e) => handleChange(e)}
+                  value={details.email}
                 />
               </div>
               <div className="relative mb-4">
@@ -160,11 +206,23 @@ export default function Home(props) {
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-slate-200 rounded border border-rose-600 focus:border-rose-500 focus:ring-2 focus:ring-rose-400 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-slate-200 rounded border border-orange-600 focus:border-orange-600 focus:ring-2 focus:ring-orange-600 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  onChange={(e) => handleChange(e)}
+                  value={details.message}
                 ></textarea>
               </div>
-              <button className="text-white bg-rose-500 border-0 py-2 px-6 focus:outline-none hover:bg-rose-700 rounded text-lg">
-                SUBMIT
+              <button className="text-white bg-orange-600 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg"
+
+                onClick={SendEmail}
+              >
+
+                {
+                  LoadText
+                    ?
+                    LoadText
+                    :
+                    'SUBMIT'
+                }
               </button>
               <p className="text-xs text-gray-400 text-opacity-90 mt-3"></p>
             </div>
