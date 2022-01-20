@@ -13,7 +13,9 @@
  *    Time of your event
  *    formate [year, month, day, hours, minutes]
  * 4. join_link
- *    give the event link hear
+ *    give the event link hear( this link will activate when event live)
+ * 4. registration_link
+ *    give the event link hear(this link can be google from which you send before event)
  * 5. is_online
  *    make true if event is online our false for offline
  * 6. location
@@ -130,6 +132,22 @@ const events = [
         'is_online':true,
         'by_who':'ACES',
         'duration':1
+
+    },
+    {
+
+        'title': 'Among Us',
+        'about': [
+            `Hello there, everyone!! Prepare for the action-packed Among Us competition! Surely you've all had some excellent brainstorming and ideation sessions.`
+            , `“You’ve got to stay focused without being boring - because all work and no play makes Jack a dull boy ” It's now time to have some fun and play some games. If you haven't participated in website making competition still you can participate in this. In the Discord Among Us channel, we will share the Joining Code there.`
+        ],
+        'time':[2022,0,17,20,27],
+        'join_link':'#',
+        'is_online':true,
+        'by_who':'ACES',
+        'duration':1000
+        ,
+        'registration_link':'#'
 
     },
 

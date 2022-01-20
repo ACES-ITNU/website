@@ -131,15 +131,15 @@ function EventList() {
 
         console.log(hour);
         if (hour < data[i].duration) {
-          
+
           l.push(data[i]);
-          
+
         } else {
           p.push(data[i]);
         }
       } else {
-        
-        
+
+
         u.push(data[i]);
 
       }
@@ -167,7 +167,7 @@ function EventList() {
 
             live.map((value, index) => {
 
-              return <Event {...value} key={index} changeList={setChange} changeValue={change}  type="live"></Event>
+              return <Event {...value} key={index} changeList={setChange} changeValue={change} type="live"></Event>
 
             })
           }
@@ -182,7 +182,7 @@ function EventList() {
 
             upcoming.map((value, index) => {
 
-              return <Event {...value} key={index} changeList={setChange} changeValue={change}  type="upcoming"></Event>
+              return <Event {...value} key={index} changeList={setChange} changeValue={change} type="upcoming"></Event>
 
             })
           }
@@ -210,7 +210,7 @@ function EventList() {
   )
 }
 
-function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue,changeList, type,location }) {
+function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location, registration_link }) {
 
   const date = GetDate(time);
 
@@ -220,29 +220,29 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
 
 
 
-  function getDateValue(tem='') {
+  function getDateValue(tem = '') {
 
-    if(type=='past') return;
+    if (type == 'past') return;
 
     const value = GetDate(time) - new Date();
 
 
- 
+
     // if(value<0 && type=='upcoming'){
     //   clearInterval(tem)
     //   changeList(!changeValue)
     //   return;
     // }
-     if(value<0 && type=='upcoming'){
+    if (value < 0 && type == 'upcoming') {
       window.location.reload()
       return;
     }
-  
 
-    if(value<0){
 
-      value=-value;
-    
+    if (value < 0) {
+
+      value = -value;
+
     }
 
 
@@ -263,7 +263,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
     //   changeList(!changeValue);
     //   return;
     // }
-      if(hours>=duration && type=='live'){
+    if (hours >= duration && type == 'live') {
       // console.log('call')
       // clearInterval(tem)
       // changeList(!changeValue);
@@ -271,7 +271,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
       return;
     }
 
-    let ans=[]
+    let ans = []
     ans.push(days)
     ans.push(hours)
     ans.push(minutes)
@@ -286,19 +286,19 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
 
   useEffect(() => {
 
-    if(type!='past'){
+    if (type != 'past') {
 
       console.log('call me')
 
-      const tem=setInterval(() => {
-        setDate(getDateValue(tem));      
+      const tem = setInterval(() => {
+        setDate(getDateValue(tem));
       }, 1000);
     }
 
-    
+
 
   }
-  , [])
+    , [])
 
 
   return (
@@ -314,18 +314,18 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
           </div>
 
           <div>
-          📋 {is_online ? 'Online' : 'Offline'}
+            📋 {is_online ? 'Online' : 'Offline'}
           </div>
 
           <div>
 
-          🧊 {duration} h
+            🧊 {duration} h
 
           </div>
 
           <div>
 
-          {is_online ? '' : `⛺ ${location}`}
+            {is_online ? '' : `⛺ ${location}`}
 
           </div>
 
@@ -333,7 +333,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
         </div>
 
         {
-           type == 'upcoming'
+          type == 'upcoming'
           &&
 
           <div className='left-time'>
@@ -355,7 +355,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[1]}
+                {DateItem[1]}
               </div>
 
             </div>
@@ -366,7 +366,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[2]}
+                {DateItem[2]}
               </div>
 
             </div>
@@ -377,7 +377,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[3]}
+                {DateItem[3]}
               </div>
 
             </div>
@@ -405,9 +405,36 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
           </div>
 
           {
-            type != 'past'
+
+
+            type == 'upcoming'
 
             &&
+
+            registration_link
+
+            &&
+
+            <a href={registration_link} target='_blank' rel="noreferrer">
+
+
+
+
+              Register
+
+
+            </a>
+
+          }
+          {
+            type == 'live'
+
+            &&
+
+
+            join_link
+            &&
+
             <a href={join_link} target='_blank' rel="noreferrer">
 
 
@@ -416,6 +443,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
 
 
             </a>
+
           }
 
         </div>
