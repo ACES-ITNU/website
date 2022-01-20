@@ -99,6 +99,7 @@
     // overflow: auto;
     justify-content: center;
     padding-bottom: 10vw;
+
     .item{
         display: flex;
         // max-height: 30rem;
@@ -106,7 +107,9 @@
         padding: 1.5rem;
         border: 0px solid;
         height: 23rem;
+        width: 100%;
         box-shadow: 0 0 10px black;
+
         h1{
             z-index: 3;
             width: 90%;

@@ -65,7 +65,9 @@ export default function Home(props) {
           transform: down ? "translateY(-100vh)" : "translateY(0)"
         }}>
           <EventList></EventList>
+
           <Footer />
+
         </div>
       </main>
     </div>
@@ -211,7 +213,7 @@ function EventList() {
   )
 }
 
-function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location }) {
+function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location, registration_link }) {
 
   const date = GetDate(time);
 
