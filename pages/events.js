@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faArrowCircleDown, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
+import Footer from '../components/Footer'
 import events from '../data/events'
 
 
@@ -64,8 +65,8 @@ export default function Home(props) {
           transform: down ? "translateY(-100vh)" : "translateY(0)"
         }}>
           <EventList></EventList>
+          <Footer />
         </div>
-
       </main>
     </div>
   )
@@ -210,7 +211,7 @@ function EventList() {
   )
 }
 
-function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location, registration_link }) {
+function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location }) {
 
   const date = GetDate(time);
 
@@ -307,30 +308,6 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
       <div className='left_item'>
         <img src='https://images.unsplash.com/photo-1565898122623-be37b5f1e778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80' alt='^'></img>
 
-        <h1>{title}</h1>
-        <div className='left-info'>
-          <div> 🗓️ {date.toDateString()}</div>
-          <div>⌚ {formatAMPM(date)}
-          </div>
-
-          <div>
-            📋 {is_online ? 'Online' : 'Offline'}
-          </div>
-
-          <div>
-
-            🧊 {duration} h
-
-          </div>
-
-          <div>
-
-            {is_online ? '' : `⛺ ${location}`}
-
-          </div>
-
-
-        </div>
 
         {
           type == 'upcoming'
@@ -392,8 +369,32 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
         <h1>{title}</h1>
         <div className='about'>
           {
-            about.map((p) => <div key={1}>{p}</div>)
+            about
           }
+        </div>
+
+        <div className='left-info'>
+          <div> 🗓️ {date.toDateString()}</div>
+          <div>⌚ {formatAMPM(date)}
+          </div>
+
+          <div>
+            📋 {is_online ? 'Online' : 'Offline'}
+          </div>
+
+          <div>
+
+            🧊 {duration} h
+
+          </div>
+
+          <div>
+
+            {is_online ? '' : `⛺ ${location}`}
+
+          </div>
+
+
         </div>
 
 
@@ -403,6 +404,8 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
             - by {by_who}
 
           </div>
+
+
 
           {
 
@@ -453,5 +456,8 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
     </div>
   )
 }
+
+
+
 
 
