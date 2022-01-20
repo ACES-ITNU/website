@@ -12,13 +12,17 @@ Host: Netlify (https://www.netlify.com/)
 login in bellow three website for change the hosting setting.
 
 1. Login in Gmail
+
     we use the same email for hosting and email send api.
     email: acesitnu@gmail.com
     password: You can find in Github Repo Secrets (https://github.com/ACES-ITNU/website/settings/secrets/actions)
 
 2. Login in GiHub (optional)
+
     login with same email and password
+
 3. Netlify Login
+
     login with same email and password
 
 

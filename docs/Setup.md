@@ -5,6 +5,7 @@ if you want to change static data our web site than read this docs first.
 
 
 1. clone the repo
+
 ```bash
 git clone git@github.com:ACES-ITNU/website.git
 ```
@@ -19,6 +20,7 @@ git clone git@github.com:ACES-ITNU/website.git
 
 
 3. run this command for push
+
 ``` bash
 git add --all
 git commit -m "my text"
