@@ -32,7 +32,7 @@
  */
 
 
- const events = [
+const events = [
 
     {
 

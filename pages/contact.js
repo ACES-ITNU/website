@@ -5,8 +5,6 @@ import { data } from 'autoprefixer';
 const axios = require('axios');
 
 
-
-
 export default function Home(props) {
   const { active, setactive, menu, setmenu } = props
   useEffect(() => {

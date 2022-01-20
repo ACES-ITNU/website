@@ -7,12 +7,17 @@ import Footer from '../components/Footer'
 import events from '../data/events'
 
 
-
 export default function Home(props) {
+
   const { active, setactive, menu, setmenu } = props
   useEffect(() => {
     setactive(3)
     setmenu(false)
+
+    // setInterval(()=>{
+    //   next()
+    // },3000)
+
   }, [])
   const [curr, setcurr] = useState(0)
   const [down, setdown] = useState(false)
@@ -28,6 +33,8 @@ export default function Home(props) {
       setcurr(curr - 1);
     }
   }
+
+  
 
   const images = [
     '20191003_125435.jpg', 'IMG_0037.jpg', 'IMG_0040.jpg', 'IMG_0042.jpg', 'IMG_20180201_172619.jpg', 'IMG_20180201_172722.jpg', 'IMG_20191003_113836.jpg', 'IMG-20191003-WA0018.jpg'
@@ -91,7 +98,6 @@ function formatAMPM(date) {
 
 function EventList() {
 
-
   const [data, setData] = useState(events.sort((a, b) => GetDate(b.time) - GetDate(a.time)));
   // const [data, setData] = useState(events.slice(1,2));
   const [live, setLive] = useState([]);
@@ -139,21 +145,14 @@ function EventList() {
           p.push(data[i]);
         }
       } else {
-
-
         u.push(data[i]);
-
       }
     }
 
     setLive(l.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
     setPast(p);
     setUpComing(u.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
-
   }
-
-
-
 
   return (
     <div className='Events'>
@@ -211,63 +210,41 @@ function EventList() {
   )
 }
 
-function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue, changeList, type, location ,registration_link }) {
+function Event({ title, about, time, join_link, is_online, by_who, duration, type, location, registration_link }) {
 
   const date = GetDate(time);
-
   const [DateItem, setDate] = useState(getDateValue());
-
-  console.log(DateItem)
+  // console.log(DateItem)
 
 
 
   function getDateValue(tem = '') {
 
     if (type == 'past') return;
-
     const value = GetDate(time) - new Date();
 
-
-
-    // if(value<0 && type=='upcoming'){
-    //   clearInterval(tem)
-    //   changeList(!changeValue)
-    //   return;
-    // }
     if (value < 0 && type == 'upcoming') {
       window.location.reload()
       return;
     }
 
-
     if (value < 0) {
-
       value = -value;
-
     }
 
 
-    var
-      seconds = Math.floor((value / 1000) % 60),
-      minutes = Math.floor((value / (1000 * 60)) % 60),
-      hours = Math.floor((value / (1000 * 60 * 60)) % 24),
-      days = Math.floor((value) / (1000 * 60 * 60 * 24));
+
+    var seconds = Math.floor((value / 1000) % 60)
+    var minutes = Math.floor((value / (1000 * 60)) % 60)
+    var hours = Math.floor((value / (1000 * 60 * 60)) % 24)
+    var days = Math.floor((value) / (1000 * 60 * 60 * 24))
 
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
     days = (days < 10) ? "0" + days : days;
 
-    // if(hours>=duration){
-    //   console.log('call')
-    //   clearInterval(tem)
-    //   changeList(!changeValue);
-    //   return;
-    // }
     if (hours >= duration && type == 'live') {
-      // console.log('call')
-      // clearInterval(tem)
-      // changeList(!changeValue);
       window.location.reload()
       return;
     }
@@ -279,27 +256,19 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
     ans.push(seconds)
 
     return ans;
-
-
-
   }
 
 
   useEffect(() => {
 
     if (type != 'past') {
-
-      console.log('call me')
-
+      // console.log('call me')
       const tem = setInterval(() => {
         setDate(getDateValue(tem));
       }, 1000);
     }
-
-
-
   }
-    , [])
+  , [])
 
 
   return (

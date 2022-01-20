@@ -1,11 +1,9 @@
 import React from 'react'
 
 export default function Logo() {
-    return (
-        <div className="svg-holder">
-            <div className='logo'>
-
-            
+  return (
+    <div className="svg-holder">
+      <div className='logo'>
         <svg width="345.751" height="108.601" viewBox="0 0 345.751 108.601" xmlns="http://www.w3.org/2000/svg">
           <g id="svgGroup" strokeLinecap="round" fillRule="evenodd" fontSize="9pt" stroke="#000" strokeWidth="0.25mm"
             fill="none" className='logo_g'>
@@ -24,6 +22,6 @@ export default function Logo() {
           </g>
         </svg>
       </div>
-      </div>
-    )
+    </div>
+  )
 }
