@@ -40,12 +40,12 @@ const events = [
         'about':
             `Applications for further studies in the US and Canada session`
         ,
-        'time': [2020, 10, 11, 18, 0],
+        'time': [2022, 0, 22, 22, 0],
         'join_link': '#',
         'is_online': true,
         'locatiion': '',
         'by_who': 'ACES',
-        'duration': 1
+        'duration': 3
 
     },
     {
