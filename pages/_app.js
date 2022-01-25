@@ -8,14 +8,13 @@ import '../styles/team.scss'
 import '../styles/events.scss'
 import '../styles/contact.scss'
 import '../styles/404.scss'
-import {useState,useEffect} from 'react'
-
+import { useState, useEffect } from 'react'
 import Logo from '../components/Logo';
 
 function MyApp({ Component, pageProps }) {
-  const [active,setactive] = useState(0)
-  const [menu,setmenu] = useState(false)
-  const [isLogo,setIsLogo]=useState(true);
+  const [active, setactive] = useState(0)
+  const [menu, setmenu] = useState(false)
+  const [isLogo, setIsLogo] = useState(true);
 
   function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor, repeat) {
     let paths = document.querySelectorAll("path");
@@ -30,35 +29,31 @@ function MyApp({ Component, pageProps }) {
       path.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
       path.style["animation-delay"] = `${i * delay}s`;
     }
-    
+
   }
 
-  useEffect(()=>{
+  useEffect(() => {
 
     setTextAnimation(0.7, 4.8, 1, 'linear', '#ffffff', false);
-
-    setTimeout(()=>{
-
+    setTimeout(() => {
       setIsLogo(false);
+    }, 6000)
 
-    },6000)
+  }, []);
 
-  },[]);
+  var state = { active, setactive, menu, setmenu }
 
-  var state = {active, setactive, menu, setmenu}
-
-
-  return(
+  return (
     <>
-    {
-      isLogo 
-      ?
-      
-      <Logo />
+      {
+        isLogo
+          ?
 
-      :
-      <Component {...pageProps} {...state} />
-    }
+          <Logo />
+
+          :
+          <Component {...pageProps} {...state} />
+      }
     </>
 
   )

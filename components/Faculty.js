@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState, useEffect } from 'react'
 
 export default function Faculty() {
-    const [index,setIndex] = useState(0)
+    const [index, setIndex] = useState(0)
     const [prevSlide, setprevSlide] = useState({
         x: "-30vw",
         y: "-6vw",
@@ -53,8 +53,8 @@ export default function Faculty() {
         opacity: "1",
         zIndex: "7"
     })
-    const [array,setArray] = useState([nextSlide,currSlide,prevSlide])
-    const [array1,setArray1] = useState([nextSlide1,currSlide1,prevSlide1])
+    const [array, setArray] = useState([nextSlide, currSlide, prevSlide])
+    const [array1, setArray1] = useState([nextSlide1, currSlide1, prevSlide1])
     const details = [
         {
             name: "Lily Singh1",
@@ -84,22 +84,22 @@ export default function Faculty() {
         yDown = first.clientY
     }
     const handleTouchMove = e => {
-        if ( ! xDown || ! yDown ) {
+        if (!xDown || !yDown) {
             return;
         }
-        var xUp = e.touches[0].clientX;                                    
+        var xUp = e.touches[0].clientX;
         var yUp = e.touches[0].clientY;
         var xDiff = xDown - xUp;
-        var yDiff = yDown - yUp;                                                                         
-        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-            if ( xDiff > 0 ) {
+        var yDiff = yDown - yUp;
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            if (xDiff > 0) {
                 prev()
             } else {
                 next()
-            }                       
+            }
         }
         xDown = null;
-        yDown = null;      
+        yDown = null;
     }
     const next = () => {
         const temp = array
@@ -125,27 +125,27 @@ export default function Faculty() {
         yDown = first.clientY
     }
     const handleTouchMove1 = e => {
-        if ( ! xDown || ! yDown ) {
+        if (!xDown || !yDown) {
             return;
         }
-    
-        var xUp = e.touches[0].clientX;                                    
+
+        var xUp = e.touches[0].clientX;
         var yUp = e.touches[0].clientY;
-    
+
         var xDiff = xDown - xUp;
         var yDiff = yDown - yUp;
-                                                                             
-        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-            if ( xDiff > 0 ) {
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            if (xDiff > 0) {
                 prev1()
             } else {
                 next1()
-            }                       
+            }
         }
         xDown = null;
-        yDown = null;      
+        yDown = null;
     }
-    const next1 = () => {        
+    const next1 = () => {
         const temp1 = array1
         let last1 = temp1.pop()
         temp1.unshift(last1)
@@ -166,16 +166,16 @@ export default function Faculty() {
     return (
         <div className="facultyteam">
             <div className="absbutton">
-                <div className="left">
+                <div className="left center">
                     {/* <img onClick={prev} src="/left.png" /> */}
                     <FontAwesomeIcon className="imgicon" onClick={prev} icon={faChevronCircleLeft} />
                 </div>
-                <div className="right">
+                <div className="right center">
                     {/* <img onClick={next} src="/right.png" /> */}
                     <FontAwesomeIcon className="imgicon" onClick={next} icon={faChevronCircleRight} />
                 </div>
             </div>
-            <div className="slider" id="desktop" 
+            <div className="slider" id="desktop"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
             >
@@ -183,7 +183,7 @@ export default function Faculty() {
                 <div
                     className="item"
                     id="prev"
-                    style = {{
+                    style={{
                         transform: `scale(${prevSlide.scale})
                                     translateX(${prevSlide.x}) translateY(${prevSlide.y}) translateZ(${prevSlide.z})`,
                         opacity: `${prevSlide.opacity}`,
@@ -193,7 +193,7 @@ export default function Faculty() {
                 >
                     <div className="left">
                         <div className="image">
-                            <img src={details[1].image}/>
+                            <img src={details[1].image}  />
                         </div>
                         <h3>{details[1].name}</h3>
                     </div>
@@ -207,7 +207,7 @@ export default function Faculty() {
                 {/* Current Element */}
                 <div
                     className="item" id="active"
-                    style = {{
+                    style={{
                         transform: `scale(${currSlide.scale})
                                     translateX(${currSlide.x}) translateY(${currSlide.y}) translateZ(${currSlide.z})`,
                         opacity: `${currSlide.opacity}`,
@@ -231,7 +231,7 @@ export default function Faculty() {
                 {/* Last Element */}
                 <div
                     className="item" id="next"
-                    style = {{
+                    style={{
                         transform: `scale(${nextSlide.scale})
                                     translateX(${nextSlide.x}) translateY(${nextSlide.y}) translateZ(${nextSlide.z})`,
                         opacity: `${nextSlide.opacity}`,
@@ -253,7 +253,7 @@ export default function Faculty() {
                 </div>
             </div>
 
-            <div className="slider" id="mobile" 
+            <div className="slider" id="mobile"
                 onTouchStart={handleTouchStart1}
                 onTouchMove={handleTouchMove1}
             >
@@ -261,7 +261,7 @@ export default function Faculty() {
                 <div
                     className="item"
                     id="prev"
-                    style = {{
+                    style={{
                         transform: prevSlide1 ? `scale(${prevSlide1.scale}) translateX(${prevSlide1.x}) translateY(${prevSlide1.y}) ` : "",
                         opacity: prevSlide1 ? `${prevSlide1.opacity}` : "",
                         zIndex: prevSlide1 ? `${prevSlide1.zIndex}` : ""
@@ -269,7 +269,7 @@ export default function Faculty() {
                 >
                     <div className="left">
                         <div className="image">
-                            <img src={details[2].image}/>
+                            <img src={details[2].image} />
                         </div>
                         <h3>{details[2].name}</h3>
                     </div>
@@ -283,7 +283,7 @@ export default function Faculty() {
                 {/* Current Element */}
                 <div
                     className="item" id="active"
-                    style = {{
+                    style={{
                         transform: `scale(${currSlide1.scale}) translateX(${currSlide1.x}) translateY(${currSlide1.y}) `,
                         opacity: `${currSlide1.opacity}`,
                         zIndex: `${currSlide1.zIndex}`
@@ -305,7 +305,7 @@ export default function Faculty() {
                 {/* Last Element */}
                 <div
                     className="item" id="next"
-                    style = {{
+                    style={{
                         transform: `scale(${nextSlide1.scale}) translateX(${nextSlide1.x}) translateY(${nextSlide1.y}) `,
                         opacity: `${nextSlide1.opacity}`,
                         zIndex: `${nextSlide1.zIndex}`
@@ -324,8 +324,7 @@ export default function Faculty() {
                     </div>
                 </div>
             </div>
-                    
+
         </div>
     )
-  }
-  
+}

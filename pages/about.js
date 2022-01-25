@@ -5,11 +5,12 @@ import { motion } from 'framer-motion'
 import nirmaLogo from '../images/Logo_NirmaUniversity_Transparent.png'
 import acesLogo from '../images/Logo_Tranparent.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowDown, faArrowUp} from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../components/Footer'
 
+
 export default function About(props) {
-  const {active, setactive, menu, setmenu} = props
+  const { active, setactive, menu, setmenu } = props
   const [downPos, setdownPos] = useState(false)
   useEffect(() => {
     setactive(1)
@@ -28,9 +29,9 @@ export default function About(props) {
         zIndex: menu ? 12 : 1,
       }}>
         <section className='section bluebg'
-        style={{
-          transform: downPos ? "translateY(-100vh)" : "translateY(0)"
-        }}
+          style={{
+            transform: downPos ? "translateY(-100vh)" : "translateY(0)"
+          }}
         >
           <div className='bg'></div>
           <h1>Nirma University</h1>
@@ -41,7 +42,7 @@ export default function About(props) {
             </p>
           </div>
         </section>
-        
+
         <section className='orangebg section' style={{
           transform: downPos ? "translateY(-100vh)" : "translateY(0)"
         }}>
@@ -53,11 +54,12 @@ export default function About(props) {
               ACES aims to make students technically stronger by organising various workshops and seminars on the latest technologies. The organisation also contributes to the betterment of society by organising socially relevant technical activities.
             </p>
           </div>
-          <Footer/>
+          <Footer />
         </section>
 
         {/* Button to change the view */}
-        <FontAwesomeIcon onClick={() => setdownPos(!downPos)} className={!downPos ? 'arrowicon orange' : 'arrowicon blue'} icon={!downPos? faArrowDown : faArrowUp} />
+        <FontAwesomeIcon onClick={() => setdownPos(!downPos)} className={!downPos ? 'arrowicon orange' : 'arrowicon blue'} icon={!downPos ? faArrowDown : faArrowUp} />
+
       </main>
     </div>
   )

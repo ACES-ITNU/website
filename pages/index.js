@@ -7,8 +7,9 @@ import Tilt from 'react-parallax-tilt';
 import graphicImage from '../images/graphic1.png'
 import Footer from '../components/Footer';
 
+
 export default function Home(props) {
-  const {active, setactive, menu, setmenu} = props
+  const { active, setactive, menu, setmenu } = props
   useEffect(() => {
     setactive(0)
     setmenu(false)
@@ -26,56 +27,58 @@ export default function Home(props) {
         zIndex: menu ? 12 : 1,
       }}>
         <div className='left'>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {
-                  x: "-100%"
-                },
-                visible: {
-                  x:0,
-                  transition: {
-                    default: {
-                      duration: 1
-                    }
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {
+                x: "-100%"
+              },
+              visible: {
+                x: 0,
+                transition: {
+                  default: {
+                    duration: 1
                   }
                 }
-              }}
-             className='leftElem'>
-              <Tilt className='tilt'>
-                <h1>ACES</h1>
-                <p><span>A</span>ssociation of <span>C</span>omputer <span>E</span>ngineering <span>S</span>tudents</p>
-              </Tilt>
-              <div className='tags'>
-                <ul>
-                  <li><span>Technological Advancements</span></li>
-                  <li><span>Technical Workshops</span></li>
-                  <li><span>Informative Sessions</span></li>
-                  <li><span>Fun Events</span></li>
-                  <li><span>Overall Development of Students</span></li>
-                </ul>
+              }
+            }}
+            className='leftElem'>
+            <Tilt className='tilt'>
+              <h1>ACES</h1>
+              <p><span>A</span>ssociation of <span>C</span>omputer <span>E</span>ngineering <span>S</span>tudents</p>
+            </Tilt>
+            <div className='tags'>
+              <ul>
+                <li><span>Technological Advancements</span></li>
+                <li><span>Technical Workshops</span></li>
+                <li><span>Informative Sessions</span></li>
+                <li><span>Fun Events</span></li>
+                <li><span>Overall Development of Students</span></li>
+              </ul>
             </div>
           </motion.div>
           <motion.img
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              x: "100%"
-            },
-            visible: {
-              x:0,
-              transition: {
-                default: {
-                  duration: 1
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {
+                x: "100%"
+              },
+              visible: {
+                x: 0,
+                transition: {
+                  default: {
+                    duration: 1
+                  }
                 }
               }
-            }
-          }}
-          className="graphic" src={graphicImage.src} />
+            }}
+            className="graphic" src={graphicImage.src} />
         </div>
+
         <Footer />
+
       </main>
       {/* <ul id="pageMenu">
           <li className={active==0 ? "active" : "normal"}><div></div></li>

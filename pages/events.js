@@ -7,12 +7,17 @@ import Footer from '../components/Footer'
 import events from '../data/events'
 
 
-
 export default function Home(props) {
+
   const { active, setactive, menu, setmenu } = props
   useEffect(() => {
     setactive(3)
     setmenu(false)
+
+    // setInterval(()=>{
+    //   next()
+    // },3000)
+
   }, [])
   const [curr, setcurr] = useState(0)
   const [down, setdown] = useState(false)
@@ -28,6 +33,8 @@ export default function Home(props) {
       setcurr(curr - 1);
     }
   }
+
+  
 
   const images = [
     '20191003_125435.jpg', 'IMG_0037.jpg', 'IMG_0040.jpg', 'IMG_0042.jpg', 'IMG_20180201_172619.jpg', 'IMG_20180201_172722.jpg', 'IMG_20191003_113836.jpg', 'IMG-20191003-WA0018.jpg'
@@ -65,7 +72,7 @@ export default function Home(props) {
           transform: down ? "translateY(-100vh)" : "translateY(0)"
         }}>
           <EventList></EventList>
-          <Footer/>
+          <Footer />
         </div>
       </main>
     </div>
@@ -90,7 +97,6 @@ function formatAMPM(date) {
 }
 
 function EventList() {
-
 
   const [data, setData] = useState(events.sort((a, b) => GetDate(b.time) - GetDate(a.time)));
   // const [data, setData] = useState(events.slice(1,2));
@@ -132,28 +138,21 @@ function EventList() {
 
         console.log(hour);
         if (hour < data[i].duration) {
-          
+
           l.push(data[i]);
-          
+
         } else {
           p.push(data[i]);
         }
       } else {
-        
-        
         u.push(data[i]);
-
       }
     }
 
     setLive(l.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
     setPast(p);
     setUpComing(u.sort((a, b) => GetDate(a.time) - GetDate(b.time)));
-
   }
-
-
-
 
   return (
     <div className='Events'>
@@ -168,7 +167,7 @@ function EventList() {
 
             live.map((value, index) => {
 
-              return <Event {...value} key={index} changeList={setChange} changeValue={change}  type="live"></Event>
+              return <Event {...value} key={index} changeList={setChange} changeValue={change} type="live"></Event>
 
             })
           }
@@ -183,7 +182,7 @@ function EventList() {
 
             upcoming.map((value, index) => {
 
-              return <Event {...value} key={index} changeList={setChange} changeValue={change}  type="upcoming"></Event>
+              return <Event {...value} key={index} changeList={setChange} changeValue={change} type="upcoming"></Event>
 
             })
           }
@@ -211,93 +210,63 @@ function EventList() {
   )
 }
 
-function Event({ title, about, time, join_link, is_online, by_who, duration, changeValue,changeList, type,location }) {
+function Event({ title, about, time, join_link, is_online, by_who, duration, type, location, registration_link }) {
 
   const date = GetDate(time);
-
   const [DateItem, setDate] = useState(getDateValue());
-
-  console.log(DateItem)
-
+  // console.log(DateItem)
 
 
-  function getDateValue(tem='') {
 
-    if(type=='past') return;
+  function getDateValue(tem = '') {
 
+    if (type == 'past') return;
     const value = GetDate(time) - new Date();
 
-
- 
-    // if(value<0 && type=='upcoming'){
-    //   clearInterval(tem)
-    //   changeList(!changeValue)
-    //   return;
-    // }
-     if(value<0 && type=='upcoming'){
+    if (value < 0 && type == 'upcoming') {
       window.location.reload()
       return;
     }
-  
 
-    if(value<0){
-
-      value=-value;
-    
+    if (value < 0) {
+      value = -value;
     }
 
 
-    var
-      seconds = Math.floor((value / 1000) % 60),
-      minutes = Math.floor((value / (1000 * 60)) % 60),
-      hours = Math.floor((value / (1000 * 60 * 60)) % 24),
-      days = Math.floor((value) / (1000 * 60 * 60 * 24));
+
+    var seconds = Math.floor((value / 1000) % 60)
+    var minutes = Math.floor((value / (1000 * 60)) % 60)
+    var hours = Math.floor((value / (1000 * 60 * 60)) % 24)
+    var days = Math.floor((value) / (1000 * 60 * 60 * 24))
 
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
     days = (days < 10) ? "0" + days : days;
 
-    // if(hours>=duration){
-    //   console.log('call')
-    //   clearInterval(tem)
-    //   changeList(!changeValue);
-    //   return;
-    // }
-      if(hours>=duration && type=='live'){
-      // console.log('call')
-      // clearInterval(tem)
-      // changeList(!changeValue);
+    if (hours >= duration && type == 'live') {
       window.location.reload()
       return;
     }
 
-    let ans=[]
+    let ans = []
     ans.push(days)
     ans.push(hours)
     ans.push(minutes)
     ans.push(seconds)
 
     return ans;
-
-
-
   }
 
 
   useEffect(() => {
 
-    if(type!='past'){
-
-      console.log('call me')
-
-      const tem=setInterval(() => {
-        setDate(getDateValue(tem));      
+    if (type != 'past') {
+      // console.log('call me')
+      const tem = setInterval(() => {
+        setDate(getDateValue(tem));
       }, 1000);
     }
-
-    
-
   }
   , [])
 
@@ -308,33 +277,9 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
       <div className='left_item'>
         <img src='https://images.unsplash.com/photo-1565898122623-be37b5f1e778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80' alt='^'></img>
 
-        <h1>{title}</h1>
-        <div className='left-info'>
-          <div> 🗓️ {date.toDateString()}</div>
-          <div>⌚ {formatAMPM(date)}
-          </div>
-
-          <div>
-          📋 {is_online ? 'Online' : 'Offline'}
-          </div>
-
-          <div>
-
-          🧊 {duration} h
-
-          </div>
-
-          <div>
-
-          {is_online ? '' : `⛺ ${location}`}
-
-          </div>
-
-
-        </div>
 
         {
-           type == 'upcoming'
+          type == 'upcoming'
           &&
 
           <div className='left-time'>
@@ -356,7 +301,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[1]}
+                {DateItem[1]}
               </div>
 
             </div>
@@ -367,7 +312,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[2]}
+                {DateItem[2]}
               </div>
 
             </div>
@@ -378,7 +323,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
               </div>
 
               <div className='time-box'>
-              {DateItem[3]}
+                {DateItem[3]}
               </div>
 
             </div>
@@ -393,8 +338,32 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
         <h1>{title}</h1>
         <div className='about'>
           {
-            about.map((p) => <div key={1}>{p}</div>)
+            about
           }
+        </div>
+
+        <div className='left-info'>
+          <div> 🗓️ {date.toDateString()}</div>
+          <div>⌚ {formatAMPM(date)}
+          </div>
+
+          <div>
+            📋 {is_online ? 'Online' : 'Offline'}
+          </div>
+
+          <div>
+
+            🧊 {duration} h
+
+          </div>
+
+          <div>
+
+            {is_online ? '' : `⛺ ${location}`}
+
+          </div>
+
+
         </div>
 
 
@@ -405,10 +374,39 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
 
           </div>
 
+
           {
-            type != 'past'
+
+
+            type == 'upcoming'
 
             &&
+
+            registration_link
+
+            &&
+
+            <a href={registration_link} target='_blank' rel="noreferrer">
+
+
+
+
+              Register
+
+
+            </a>
+
+          }
+          {
+            type == 'live'
+
+            &&
+
+
+            join_link
+            &&
+
+
             <a href={join_link} target='_blank' rel="noreferrer">
 
 
@@ -417,6 +415,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
 
 
             </a>
+
           }
 
         </div>
@@ -426,5 +425,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, cha
     </div>
   )
 }
+
+
 
 
