@@ -1,64 +1,104 @@
-.svg-holder{
+.loading { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
- 
-
-    .logo{
-
+  .cube {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    transform-style: preserve-3d;
+    animation: animate 3s linear infinite;
+    div {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background: linear-gradient(#151515, rgb(228, 87, 31));
+        background-color: rgb(228, 87, 31);
+        img {
+          width: 80%;
+        }
+      }
     }
-
-
-    .logo_g{
-      stroke:#000;
-      stroke-width:0.25mm;
-      fill:none
-    }
-
-
   }
-  /* Google chrome */
+}
 
-  @-webkit-keyframes svg-text-anim {
-    40% {
-      stroke-dashoffset: 0;
-      fill: transparent;
-    }
-
-    60% {
-      stroke-dashoffset: 0;
-      fill: #14e7b3;
-    }
-
-    100% {
-      stroke-dashoffset: 0;
-      fill: #14e7b3;
-    }
-
+.loader {
+  margin-top: 8vw;
+  width: 20vw;
+  height: 0.5vw;
+  border: 0.01vw solid rgb(228, 87, 31);
+  border-radius: 1vw;
+  .percentage {
+    width: 20vw;
+    height: 0.5vw;
+    background: rgb(228, 87, 31);
+    border-radius: 1vw;
+    animation: loading 6s linear;
   }
-
-  /* Most browsers */
-  @keyframes svg-text-anim {
-    40% {
-      stroke-dashoffset: 0;
-      fill: transparent;
-    }
-
-    60% {
-      stroke-dashoffset: 0;
-      fill: #14e7b3;
-    }
-
-    100% {
-      stroke-dashoffset: 0;
-      fill: #09136b;
-    }
-
+  .logoAnim {
+    position: absolute;
+    width: 4vw;
+    transform: translate(-50%, -55%) translateX(20vw);
+    animation: logoloading 6s linear;
   }
+}
+p.loadp {
+  margin-top: 3vw !important;
+  font-size: 1.3vw;
+  animation: blinking 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes logoloading {
+  0% {
+    transform: translate(-50%, -55%) translateX(0vw);
+  }
+  100% {
+    transform: translate(-50%, -55%) translateX(20vw);
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
