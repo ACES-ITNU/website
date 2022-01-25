@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
-import { data } from 'autoprefixer';
-const axios = require('axios');
+// import { data } from 'autoprefixer';
+import axios from 'axios';
 
 
 export default function Home(props) {
