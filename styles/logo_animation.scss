@@ -14,7 +14,7 @@
     width: 5vw;
     height: 5vw;
     transform-style: preserve-3d;
-    animation: animate 3s linear infinite;
+    animation: animate 2s linear infinite;
     div {
       position: absolute;
       top: 0;
@@ -49,13 +49,13 @@
     height: 0.5vw;
     background: rgb(228, 87, 31);
     border-radius: 1vw;
-    animation: loading 6s linear;
+    animation: loading 2s linear;
   }
   .logoAnim {
     position: absolute;
     width: 4vw;
     transform: translate(-50%, -55%) translateX(20vw);
-    animation: logoloading 6s linear;
+    animation: logoloading 2s linear;
   }
 }
 p.loadp {

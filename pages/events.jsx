@@ -72,7 +72,7 @@ export default function Home(props) {
           transform: down ? "translateY(-100vh)" : "translateY(0)"
         }}>
           <EventList></EventList>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </main>
     </div>
@@ -129,14 +129,14 @@ function EventList() {
         data[i].duration = 2;
       }
 
-      console.log(data[i])
+      //console.log(data[i])
 
       const value = GetDate(data[i].time) - new Date();
 
       if (value < 0) {
         const hour = Math.floor((-value / (1000 * 60 * 60)));
 
-        console.log(hour);
+        //console.log(hour);
         if (hour < data[i].duration) {
 
           l.push(data[i]);
@@ -214,14 +214,14 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
 
   const date = GetDate(time);
   const [DateItem, setDate] = useState(getDateValue());
-  // console.log(DateItem)
+  // //console.log(DateItem)
 
 
 
   function getDateValue(tem = '') {
 
     if (type == 'past') return;
-    const value = GetDate(time) - new Date();
+    let value = GetDate(time) - new Date();
 
     if (value < 0 && type == 'upcoming') {
       window.location.reload()
@@ -262,7 +262,7 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
   useEffect(() => {
 
     if (type != 'past') {
-      // console.log('call me')
+      // //console.log('call me')
       const tem = setInterval(() => {
         setDate(getDateValue(tem));
       }, 1000);
@@ -274,8 +274,11 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
   return (
     <div className='item'>
 
+   
+
       <div className='left_item'>
         <img src='https://images.unsplash.com/photo-1565898122623-be37b5f1e778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80' alt='^'></img>
+        {/* <img src='https://images.unsplash.com/photo-1524678714210-9917a6c619c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80' alt='^'></img> */}
 
 
         {
@@ -329,10 +332,12 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
             </div>
 
           </div>
-        }
+        
+         }
 
 
       </div>
+
       <div className='right-item'>
 
         <h1>{title}</h1>

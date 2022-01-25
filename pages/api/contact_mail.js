@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     await client.sendAsync(
       {
         from: mymail,
-        to: mymail,
+        to: 'aces.it@nirmauni.ac.in',
         subject: `Contact Mail from ${name}`,
         text: `Email from: ${email} \n Message: ${message}`
 
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
                       outline: none;
                       border: none;
                       padding: 5px;">
-                      <a href="https://aces-nirma.netlify.app/" style="color: wheat;
+                      <a href="https://aces-nirmauni.netlify.app/" style="color: wheat;
                       font-size: 1.5rem;
                       font-weight: bold;
                       text-decoration:none;

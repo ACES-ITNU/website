@@ -124,18 +124,18 @@ export default function Home(props) {
                     Gujarat 382481
                   </p>
                   <br></br>
-                  <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                  <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                     <a
                       href="https://www.facebook.com/aces.itnu/"
                       target="_blank"
-                      class="text-rose-400"
+                      className="text-orange-600" rel="noreferrer"
                     >
                       <svg
                         fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-5 h-5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -145,15 +145,15 @@ export default function Home(props) {
                     <a
                       href="https://www.instagram.com/aces_it_nu/"
                       target="_blank"
-                      class="ml-3 text-rose-400"
+                      className="ml-3 text-orange-600" rel="noreferrer"
                     >
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-5 h-5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
                         <rect
@@ -170,15 +170,15 @@ export default function Home(props) {
                     <a
                       href="https://www.linkedin.com/company/association-of-computer-engineering-students/"
                       target="_blank"
-                      class="ml-3 text-rose-400"
+                      className="ml-3 text-orange-600" rel="noreferrer"
                     >
                       <svg
                         fill="currentColor"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="0"
-                        class="w-5 h-5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="0"
+                        className="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -195,7 +195,7 @@ export default function Home(props) {
                     EMAIL
                   </h2>
                   <a className="text-orange-600 leading-relaxed">
-                    xyz@nirmauni.ac.in
+                  aces.it@nirmauni.ac.in
                   </a>
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                     PHONE

@@ -1,6 +1,6 @@
 # Official Website of the club
 
-Use Full File Link for Team:
+Use-full file link for code:
 
 1. [Host Docs](./docs/Host.md)
 2. [Setup Docs](./docs/Setup.md)

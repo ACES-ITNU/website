@@ -54,7 +54,7 @@ export default function About(props) {
               ACES aims to make students technically stronger by organising various workshops and seminars on the latest technologies. The organisation also contributes to the betterment of society by organising socially relevant technical activities.
             </p>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </section>
 
         {/* Button to change the view */}

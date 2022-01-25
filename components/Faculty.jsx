@@ -1,7 +1,7 @@
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState, useEffect } from 'react'
-
+import { details } from '../data/faculty'
 export default function Faculty() {
     const [index, setIndex] = useState(0)
     const [prevSlide, setprevSlide] = useState({
@@ -55,23 +55,7 @@ export default function Faculty() {
     })
     const [array, setArray] = useState([nextSlide, currSlide, prevSlide])
     const [array1, setArray1] = useState([nextSlide1, currSlide1, prevSlide1])
-    const details = [
-        {
-            name: "Lily Singh1",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-            image: "/director.jpg"
-        },
-        {
-            name: "Lily Singh2",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-            image: "/director.jpg"
-        },
-        {
-            name: "Lily Singh3",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-            image: "/director.jpg"
-        }
-    ]
+  
     var xDown = null
     var yDown = null
 
@@ -199,7 +183,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[1].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>
@@ -223,7 +207,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[0].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>
@@ -247,7 +231,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[2].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>
@@ -275,7 +259,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[2].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>
@@ -297,7 +281,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[0].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>
@@ -319,7 +303,7 @@ export default function Faculty() {
                     </div>
                     <div className="right">
                         <p className="lq">&ldquo;</p>
-                        <p>{details[index].text}</p>
+                        <p>{details[1].text}</p>
                         <p className="rq">&rdquo;</p>
                     </div>
                 </div>

@@ -21,80 +21,97 @@ export const TEAM_MEMBERS = [
     name: 'Kanisha Shah',
     position: 'President',
     image: kanisha,
+    link:'https://www.linkedin.com/in/kanisha-shah97/'
   },
   {
     name: 'Meet Vora',
     position: 'Vice-President',
     image: meet,
+    link:'https://www.linkedin.com/in/meet-vora-6573651b2/'
   },
   {
     name: 'Aayush Shah',
     position: 'Graphic Designer',
     image: aayush,
+    link:'https://www.linkedin.com/in/aayushtheapple/'
   },
   {
     name: 'Akshat Shah',
     position: 'Organizing Secretary',
     image: akshat,
+    link:'https://www.linkedin.com/in/akshat-shah-a129a01a7/'
   },
   {
     name: 'Ansh Ray',
     position: 'Public Relations Officer',
     image: ansh,
+    link:'https://www.linkedin.com/in/ansh-ray-092668205/'
   },
   {
     name: 'Gaurav Sakariya',
     position: 'Creative Head',
     image: gaurav,
+    link:'https://www.linkedin.com/in/gaurav-sakariya-7354051b2/'
   },
   {
     name: 'Kalp Mepani',
     position: 'Treasurer',
     image: kalp,
+    link:'https://www.linkedin.com/in/kalp-mepani-5350671a2/'
   },
   {
     name: 'Kunj Thakkar',
     position: 'General Secretary',
     image: kunj,
+    link:'https://www.linkedin.com/in/kunj-thakkar-b654041b2/'
   },
   {
     name: 'Manan Patel',
     position: 'Join Secretary',
     image: manan,
+    link:'https://www.linkedin.com/in/manan-patel-0299a9202/'
   },
+
   {
     name: 'Naman Thaker',
     position: 'Managing Director',
     image: naman,
+    link:'https://www.linkedin.com/in/naman-thaker-50b46a190/'
   },
   {
     name: 'Sachi Chaudhary',
     position: 'Marketing Director',
     image: sachi,
+    link:'https://www.linkedin.com/in/sachi-chaudhary-49b2041a0/'
   },
   {
     name: 'Savan Vaghani',
     position: 'Membership Chair',
     image: savan,
+    link:'https://www.linkedin.com/in/savan-vaghani-12a928195/'
   },
   {
     name: 'Shivam Panchal',
     position: 'Technical Head',
     image: shivam,
+    link:'https://www.linkedin.com/in/shivam-panchal-3947391b0/'
   },
   {
     name: 'Yagnik Thummar',
     position: 'Technical Head',
     image: yagnik,
+    link:'https://www.linkedin.com/in/yagnikthummar/'
   },
   {
     name: 'Mrunal Shah',
     position: 'Director General',
     image: mrunal,
+    link:'https://www.linkedin.com/in/mrunal-shah-88118419a/'
   },
   {
     name: 'Yash Savani',
     position: 'Editor',
     image: yash,
+    link:'https://www.linkedin.com/in/sr-yashsavani/'
   },
 ]

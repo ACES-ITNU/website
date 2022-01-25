@@ -34,32 +34,19 @@
 
 const events = [
 
-    {
-
-        'title': 'Applications for further studies in the US and Canada',
-        'about':
-            `Applications for further studies in the US and Canada session`
-        ,
-        'time': [2022, 0, 22, 22, 0],
-        'join_link': '#',
-        'is_online': true,
-        'locatiion': '',
-        'by_who': 'ACES',
-        'duration': 3
-
-    },
+   
     {
 
         'title': 'Decoding the domain of CSE',
         'about':
             `Webinars on different domains of CSE  by different experts`
         ,
-        'time': [2021, 0, 12, 18, 0],
+        'time': [2022, 0, 25, 23, 0],
         'join_link': '#',
         'is_online': true,
         'locatiion': '',
         'by_who': 'ACES',
-        'duration': 2
+        'duration': 2000
 
     },
     {
