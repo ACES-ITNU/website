@@ -9,8 +9,8 @@ import janmejay from '../images/developer/Janmejay.jpg'
 import krisha from '../images/developer/krisha.jpg'
 import jatin from '../images/developer/jatin.jpeg'
 import zeel from '../images/developer/zeel.jpg'
-import barun from '../images/developer/barun.jpg'
-import dhruvil from '../images/developer/dhruvil.png'
+import barun from '../images/developer/Barun.jpg'
+import dhruvil from '../images/developer/Dhruvil.png'
 
 export default function Team(props) {
   const { active, setactive, menu, setmenu } = props
