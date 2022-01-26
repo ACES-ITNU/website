@@ -11,7 +11,7 @@ const details = [
     },
     {
         name: "Pooja Shah",
-        text: "Prof Pooja Shah is Assistant Professor under the department of Computer Science and Engineering. She has over 15 years of teaching experience. Prof Shah has received her BE in Computer Engineering from Saurashtra University (2005) and MTech Computer Science and Engineering from Nirma University (2012)",
+        text: "Prof Pooja Shah is Assistant Professor under the department of Computer Science and Engineering. She has over 15 years of teaching experience.",
         image: "https://technology.nirmauni.ac.in/wp-content/uploads/sites/22/2019/09/pooja-120x120.jpg"
     }
 ]

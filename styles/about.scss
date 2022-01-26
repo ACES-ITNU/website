@@ -18,10 +18,10 @@
     }
   }
   .blue {
-    background: rgb(1, 8, 27);
+    background-color: rgb(240, 137, 96);
   }
   .orange {
-    background: rgb(228, 87, 31);
+    background-color: rgb(8, 61, 92);
   }
   .section {
     display: flex;
@@ -97,6 +97,10 @@
       height: 6vw;
       width: 6vw;
       padding: 1vw;
+    }
+    .arrowicon  {
+      width: 10vw;
+      height: 10vw;
     }
     .section {
       padding-top: 0;

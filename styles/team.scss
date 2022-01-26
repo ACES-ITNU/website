@@ -12,74 +12,42 @@
       width: 100%;
       margin: 0 auto;
       font-weight: 400;
-      font-size: 3vw;
+      font-size: 2rem;
       color: rgb(1, 8, 27);
     }
-    // .faculty {
-    //     height: 100vh;
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     width: 100%;
-    //     .item {
-    //         width: 22%;
-    //         padding: 2vw;
-    //         border: 0.01vw solid #eee;
-    //         box-shadow: inset 0 0 1vw 0.1vw #eee;
-    //         border-radius: 1vw;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: flex-start;
-    //         align-items: center;
-    //         img {
-    //             border-radius: 50%;
-    //             width: 7vw;
-    //             height: 7vw;
-    //             object-fit: cover;
-    //         }
-    //         h1 {
-    //             width: 100%;
-    //             text-align: center;
-    //             font-size: 2vw;
-    //             font-weight: 500;
-    //             color: rgb(1, 8, 27);
-    //             margin: 1vw 0 0 0;
-    //         }
-    //         h4 {
-    //             width: 100%;
-    //             text-align: center;
-    //             font-size: 1vw;
-    //             color: #999;
-    //             font-weight: 400;
-    //             margin: 0.5vw 0 1vw 0;
-    //         }
-    //         p {
-    //             margin: 1vw 0;
-    //             width: 100%;
-    //             text-align: left;
-    //             font-size: 0.9vw;
-    //             color: #444;
-    //         }
-    //         transition: all 1s ease-in-out;
-    //         &:hover {
-    //             border: 0.01vw solid rgb(228, 87, 31);
-    //             background: rgba(228, 87, 31, 0.8);
-    //             box-shadow: inset 0 0 0.5vw 0.05vw rgba(0,0,0,0.3);
-    //             transform: scale(1.1);
-    //             h1 {
-    //                 color: white;
-    //             }
-    //             h4 {
-    //                 font-weight: 500;
-    //                 color: black;
-    //             }
-    //             p {
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
+    h1 {
+      width: 100%;
+      margin: 0px auto;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+    }
+    .all {
+      // background-color: #333;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      // gap: 2rem;
+    }
+    .team_mem {
+      // margin-top: 50vh;
+      // background-color: rebeccapurple;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .dev1 {
+      // margin-top: 80vh;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .teamSection {
       width: 100%;
       height: 100vh;
@@ -95,14 +63,6 @@
         padding: 5vw 0 3vw 0;
         // margin: 0;
 
-        h1 {
-          width: 100%;
-          margin: 0 auto;
-          font-weight: 400;
-          font-size: 3vw;
-          text-align: center;
-          color: rgb(1, 8, 27);
-        }
         ul {
           width: 90%;
           margin: 1vw auto;
@@ -197,212 +157,6 @@
             cursor: pointer;
             .details {
               visibility: visible;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #team {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    .team {
-      width: 100%;
-      height: 100vh;
-      overflow: auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      .heading {
-        height: 20vh;
-        transform: translateY(20vh);
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        font-weight: 600;
-        font-size: 5vw;
-        color: rgb(1, 8, 27);
-      }
-      .faculty {
-        padding-top: 5vh;
-        height: 62vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-
-        .item {
-          width: 45%;
-          padding: 2vw;
-          border: 0.01vw solid #eee;
-          box-shadow: inset 0 0 1vw 0.1vw #eee;
-          border-radius: 1vw;
-          img {
-            border-radius: 50%;
-            width: 12vw;
-            height: 12vw;
-            object-fit: cover;
-          }
-          h1 {
-            width: 100%;
-            text-align: center;
-            font-size: 3vw;
-            font-weight: 500;
-            color: rgb(1, 8, 27);
-            margin: 1vw 0 0 0;
-          }
-          h4 {
-            width: 100%;
-            text-align: center;
-            font-size: 2vw;
-            color: #999;
-            font-weight: 400;
-            margin: 0.5vw 0 1vw 0;
-          }
-          p {
-            margin: 1vw 0;
-            width: 100%;
-            text-align: left;
-            font-size: 1.6vw;
-            line-height: 110%;
-            font-weight: 500;
-            color: #444;
-          }
-          transition: all 1s ease-in-out;
-          &:hover {
-            border: 0.01vw solid rgb(228, 87, 31);
-            background: rgba(228, 87, 31, 0.8);
-            box-shadow: inset 0 0 0.5vw 0.05vw rgba(0, 0, 0, 0.3);
-            transform: scale(1.1);
-            h1 {
-              color: white;
-            }
-            h4 {
-              font-weight: 500;
-              color: black;
-            }
-            p {
-              color: white;
-            }
-          }
-        }
-      }
-      .teamSection {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      .imagePart {
-        padding: 5vw 0;
-        width: 100%;
-        .content {
-          width: 100%;
-          padding: 5vw 0 3vw 0;
-          // margin: 40vw auto 0 auto;
-          h1 {
-            width: 100%;
-            margin: 0 auto;
-            font-weight: 600;
-            font-size: 5vw;
-            text-align: center;
-            color: rgb(1, 8, 27);
-          }
-          ul {
-            width: 90%;
-            margin: 1vw auto;
-            li {
-              width: 100%;
-              span {
-                display: inline-block;
-                width: 30%;
-                color: rgb(228, 87, 31);
-              }
-            }
-          }
-        }
-        .grid-container {
-          overflow: auto;
-          width: 90%;
-          margin: 0 auto;
-          // display: flex;
-          // justify-content: space-evenly;
-          // align-items: flex-start;
-          // flex-wrap: wrap;
-          padding: 0;
-          overflow: hidden;
-          .carousel {
-            padding: 2vw 3vw 6vw 3vw;
-          }
-          .icon {
-            position: absolute;
-            height: 3vw;
-            * {
-              color: black;
-            }
-          }
-          #prev {
-            transform: translateX(0vw) translateY(-2vw);
-          }
-          #next {
-            transform: translateX(-3vw) translateY(-2vw);
-          }
-          .image {
-            width: 20vw;
-            height: 20vw;
-            margin: 0.5vw auto;
-            img {
-              width: 100%;
-              margin: 0 auto;
-            }
-            .details {
-              visibility: hidden;
-              width: 20vw;
-              transform: translateY(14.55vw) translateX(0);
-              height: 5vw;
-              .left {
-                h1 {
-                  font-size: 1.5vw;
-                  line-height: 110%;
-                  font-weight: 500;
-                  margin: 0.3vw 0;
-                  color: #555;
-                }
-                h3 {
-                  font-size: 1vw;
-                  line-height: 110%;
-                  font-weight: 500;
-                  margin: 0.3vw 0;
-                  color: #333;
-                }
-              }
-              a {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                .icon {
-                  height: 2.5vw;
-                  * {
-                    color: black;
-                  }
-                }
-              }
-            }
-            &:hover {
-              cursor: pointer;
-              .details {
-                visibility: visible;
-              }
             }
           }
         }
@@ -544,247 +298,241 @@
   }
 }
 
-// @media only screen and (max-width: 500px) {
-//   .facultyteam {
-//     height: 100%;
-//     h1 {
-//       width: 90%;
-//       font-weight: 500;
-//       margin: 0 auto;
-//       text-align: left;
-//       padding: 1vw 0;
-//       line-height: 100%;
-//       font-size: 4vw;
-//       color: white;
-//       margin-bottom: 8vw;
-//     }
-//     .absbutton {
-//       display: none;
-//     }
-//     #desktop {
-//       display: none;
-//     }
-//     #mobile {
-//       padding: 2vw 0 2vw 0;
-//       width: 90%;
-//       height: 68.458vw;
-//       margin: 1vw auto 1vw auto;
-//       display: flex;
-//       flex-direction: row;
-//       justify-content: space-evenly;
-//       align-items: center;
-//       transform: translateX(-50vw);
-//       .item {
-//         transition: all linear 0.4s;
-//         position: absolute;
-//         width: 56vw;
-//         height: 58.458vw;
-//         top: 0;
-//         margin: 1vw auto;
-//         box-sizing: border-box;
-//         padding: 3vw 3vw 0 3vw;
-//         background: rgb(255, 255, 255);
-//         border-radius: 1vw;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         box-shadow: 0px 0px 3px 0px #aaa;
-//         .left {
-//           width: 48vw;
-//           height: 8vw;
-//           display: flex;
-//           flex-direction: row;
-//           justify-content: space-between;
-//           align-items: center;
-//           padding-top: 5vw;
-//           padding-left: 4vw;
-//           .image {
-//             width: 14vw;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             img {
-//               width: 14vw;
-//               margin: 0;
-//             }
-//           }
-//           h3 {
-//             width: 30vw;
-//             margin: 1vw 0;
-//             padding: 0;
-//             font-weight: 400;
-//             line-height: 100%;
-//             font-size: 2.5vw;
-//           }
-//         }
-//         .right {
-//           width: 47.897vw;
-//           display: flex;
-//           flex-direction: row;
-//           justify-content: center;
-//           align-items: center;
-//           p {
-//             font-size: 1.9vw;
-//             padding: 0;
-//             padding-left: 2vw;
-//             padding-right: 1vw;
-//             color: black;
-//             font-weight: 400;
-//             width: 42vw;
-//           }
-//           .lq,
-//           .rq {
-//             width: 4vw;
-//             font-family: "Arial";
-//             position: initial;
-//             font-size: 14vw;
-//             color: rgb(1, 8, 27);
-//           }
-//           .lq {
-//             transform: translateX(0vw) translateY(-7vw);
-//           }
-//           .rq {
-//             transform: translateX(0vw) translateY(14vw);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1100px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0rem;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .team_mem {
+    width: 100%;
+    margin-top: 15rem;
+    // background-color: #333;
+  }
+ 
+  .heading{
+    margin-bottom: 3rem !important;
+  }
   .facultyteam {
-    // margin: 0;
-    // width: 100%;
-    height: 100%;
-    // h1 {
-    //     width: 90%;
-    //     font-weight: 500;
-    //     margin: 0 auto;
-    //     text-align: left;
-    //     padding: 1vw 0;
-    //     line-height: 100%;
-    //     font-size: 2.6vw;
-    //     color: white;
-    // }
-    .absbutton {
-      position: relative;
-      z-index: 15 !important;
-      margin: 0 auto;
-      // left: 50%;
-      transform: translate(0, 0) translateY(25vw);
-      width: 59vw;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    height: 30rem;
+    .right{
+      p{
+
+        font-size: .7rem !important;
       }
-      .left,
-      .right {
-        width: 2.8vw;
-        height: 2.8vw;
-        border-radius: 50%;
-        background: black;
-        .imgicon {
-          border-radius: 50%;
-          transform: scale(1.05);
-          width: 2.9vw;
-          cursor: pointer;
-          * {
-            color: white;
-          }
-        }
+      .lq{
+        transform: translateX(-16vw) translateY(-5vw) !important;
       }
+      
     }
-    #desktop {
-      display: flex;
-    }
-    #mobile {
-      display: none;
-    }
-    .slider {
-      padding: 5vw 0 0 0;
-      width: 90%;
-      margin: 1vw auto 0 auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      transform: translateY(18vw);
-      .item {
-        transition: all linear 0.5s;
-        position: absolute;
-        width: 56.302vw;
-        height: 32vw;
-        margin: 1vw auto 1vw auto;
-        box-sizing: border-box;
-        padding: 3vw 6vw 3vw 3vw;
-        background: rgb(228, 87, 31);
-        border-radius: 1vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .left {
-          width: 25%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-          .image {
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            img {
-              width: 12vw;
-              margin: 0;
-            }
-          }
-          h3 {
-            margin: 1vw 0;
-            padding: 0;
-            line-height: 100%;
-            font-size: 3vw;
-            font-weight: 500 !important;
-            color: white;
-          }
-        }
-        .right {
-          width: 65%;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          p {
-            font-size: 2vw;
-            padding: 0;
-            padding-left: 2vw;
-            padding-right: 1vw;
-            color: white;
-            font-weight: 600;
-          }
-          .lq,
-          .rq {
-            font-family: "Arial";
-            position: absolute;
-            font-size: 8vw;
-            color: white;
-          }
-          .lq {
-            transform: translateX(-17vw) translateY(-2vw);
-          }
-          .rq {
-            transform: translateX(15vw) translateY(6vw);
-          }
-        }
-      }
+    .item{
+      height: 27vw !important;
     }
   }
+}
+
+@media only screen and (max-width: 801px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0rem;
+  }
+  .team_mem {
+    margin-top: 10rem;
+    // background-color: rebeccapurple;
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .dev1 {
+    margin-top: 22rem;
+    // background-color: #555;
+    height: 200vh;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // gap: 7rem;
+  }
+  .team_mem {
+    // background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    margin-top: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .dev1 {
+    margin-top: 80rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // gap: 7rem;
+  }
+  .team_mem {
+    // background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    // margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .dev1 {
+    margin-top: 80rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // gap: 7rem;
+  }
+  .team_mem {
+    // background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    margin-top: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .dev1 {
+    margin-top: 80rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .facultyteam {
+    height: 30rem;
+    .right{
+      p{
+
+        font-size: .5rem !important;
+      }
+      .lq{
+        transform: translateX(-16vw) translateY(-5vw) !important;
+      }
+      
+    }
+    .item{
+      height: 27vw !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .all {
+    // background-color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // gap: 7rem;
+  }
+  .team_mem {
+    // background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    margin-top: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0px auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .dev1 {
+    margin-top: 75rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
