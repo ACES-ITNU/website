@@ -177,8 +177,7 @@ export default function Faculty() {
             </div>
             <div className="slider" id="desktop"
                 onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-            >
+                onTouchMove={handleTouchMove}>
                 {/* First Element */}
                 <div
                     className="item"

@@ -2,15 +2,11 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import { TEAM_MEMBERS } from '../data/team'
-import TeamCard from '../components/teamCard'
+import { DEVELOPER_MEMBERS } from '../data/devloper';
+import TeamCard from '../components/TeamCard'
 import Footer from '../components/Footer'
 import Faculty from '../components/Faculty'
-import janmejay from '../images/developer/Janmejay.jpg'
-import krisha from '../images/developer/krisha.jpg'
-import jatin from '../images/developer/jatin.jpeg'
-import zeel from '../images/developer/zeel.jpg'
-import barun from '../images/developer/Barun.jpg'
-import dhruvil from '../images/developer/Dhruvil.png'
+
 
 export default function Team(props) {
   const { active, setactive, menu, setmenu } = props
@@ -42,119 +38,50 @@ export default function Team(props) {
         <div className="team">
           <h1 className="heading">ACES and Nirma University</h1>
           <Faculty />
-
+          <div className='all'>
           <div className="teamSection">
-            <div className="imagePart flex flex-col items-center">
+            <div className="imagePart part1  flex flex-col items-center justify-center text-center">
               <div className="content">
-                <h1>Meet Our Creative Network</h1>
               </div>
-              <div className="flex flex-wrap -m-2 w-11/12">
+              <div className="team_mem flex flex-wrap -m-2 w-10/12">
+                <h1>Meet Our Creative Network</h1>
+                <div className='flex flex-row flex-wrap'>
                 {TEAM_MEMBERS.map((member, index) => (
                   <TeamCard
                     key={index}
                     name={member.name}
                     position={member.position}
                     image={member.image}
+                    link={member.link}
                   />
                 ))}
+                </div>
               </div>
             </div>
           </div>
           <div className="developer-section">
-            <div className="imagePart flex flex-col items-center">
+            <div className="imagePart part2 flex flex-col items-center">
               <div className="content">
-                <h1>Developed By</h1>
               </div>
-              <div className="flex flex-wrap -m-2 w-11/12">
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={janmejay.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Janmejay Shastri
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={krisha.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Krisha Vora
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={jatin.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Jatin Kashyap
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={zeel.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Zeel Prajapati
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={barun.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Barun Debnath
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2 lg:w-1/6 md:w-1/2 w-full">
-                  <div className="h-full flex items-center border-rose-600 border p-4 rounded-lg">
-                    <img
-                      alt="team"
-                      className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 transform hover:transition hover:duration-300 hover:scale-125 hover:cursor-pointer"
-                      src={dhruvil.src}
-                    />
-                    <div className="flex-grow">
-                      <h2 className="text-gray-800 title-font font-medium">
-                        Dhruvil Shah
-                      </h2>
-                    </div>
-                  </div>
+              <div className="dev1 flex flex-wrap justify-center items-center">
+                <h1>Website Developed By</h1>
+                <div className=' flex flex-row items-center justify-center flex-wrap'>
+                {DEVELOPER_MEMBERS.map((member, index) => (
+                  <TeamCard
+                    key={index}
+                    name={member.name}
+                    image={member.image}
+                    link={member.link}
+                  />
+                ))}
                 </div>
               </div>
+
             </div>
           </div>
-        </div>
-        <Footer />
+          </div>
+          </div>
+          {/* <Footer /> */}
       </main>
     </div>
   )
