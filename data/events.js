@@ -32,6 +32,7 @@
  */
 
 
+
 const events = [
 
    
@@ -46,7 +47,8 @@ const events = [
         'is_online': true,
         'locatiion': '',
         'by_who': 'ACES',
-        'duration': 2000
+        'duration': 2,
+        'registration_link':'#'
 
     },
     {

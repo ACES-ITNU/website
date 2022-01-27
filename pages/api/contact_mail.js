@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
   const { email, name, message } = req.body;
   const mymail = process.env.mail;
-  const password = process.env.password
+  const password = process.env.password;
 
   // console.log(mymail,password);
 
