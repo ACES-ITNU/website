@@ -102,3 +102,125 @@ p.loadp {
     opacity: 1;
   }
 }
+@media only screen and (max-width:700px) {
+  .loading { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .cube {
+      position: relative;
+      width: 20vw !important;
+      height: 20vw !important;
+      transform-style: preserve-3d;
+      animation: animate 2s linear infinite;
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        .front{
+          transform:translateX(10vw) translateZ(10vw) rotateY(0deg) !important;
+        }
+        .back{
+          transform: translateZ(20vw) rotateY(90deg) !important;
+        }
+        
+        .top{
+          // background-color: aqua;
+          transform: translateX(10vw) translateZ(30vw) rotateY(180deg) !important;
+        }
+
+        .bottom{
+          transform: translateX(20vw) translateZ(20vw) rotateY(90deg) !important;
+        }
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          // background: linear-gradient(#151515, rgb(228, 87, 31));
+          background-color: rgb(228, 87, 31);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  .loader {
+    margin-top: 22vw;
+    width: 20vw;
+    height: 1.5vw;
+    border: 0.01vw solid rgb(228, 87, 31);
+    border-radius: 1vw;
+    .percentage {
+      width: 20vw;
+      height: 1.5vw;
+      background: rgb(228, 87, 31);
+      border-radius: 1vw;
+      animation: loading 2s linear;
+    }
+    .logoAnim {
+      position: absolute;
+      width: 8vw;
+      transform: translate(-50%, -55%) translateX(20vw);
+      animation: logoloading 2s linear;
+    }
+  }
+  p.loadp {
+    margin-top: 5vw !important;
+    font-size: 3.3vw;
+    animation: blinking 2s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(-30deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes loading {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes logoloading {
+    0% {
+      transform: translate(-50%, -55%) translateX(0vw);
+    }
+    100% {
+      transform: translate(-50%, -55%) translateX(20vw);
+    }
+  }
+  
+  @keyframes blinking {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
