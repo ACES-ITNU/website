@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight, faArrowCircleDown, faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../components/Footer'
 import events from '../data/events'
+import Fade from 'react-reveal/Fade';
 
 
 export default function Home(props) {
@@ -272,6 +273,8 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
 
 
   return (
+    <Fade bottom>
+ 
     <div className='item'>
 
    
@@ -428,6 +431,8 @@ function Event({ title, about, time, join_link, is_online, by_who, duration, typ
       </div>
 
     </div>
+         
+    </Fade>
   )
 }
 

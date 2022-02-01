@@ -7,6 +7,8 @@ import acesLogo from "../images/Logo_Tranparent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
+import Fade from 'react-reveal/Fade';
+
 
 export default function About(props) {
   const { active, setactive, menu, setmenu } = props;
@@ -43,7 +45,9 @@ export default function About(props) {
           }}
         >
           <div className="bg"></div>
+          <Fade bottom>
           <h1>Nirma University</h1>
+        
           <div>
             <img src={nirmaLogo.src} />
             <p>
@@ -55,6 +59,7 @@ export default function About(props) {
               institutes are highly ranked by different ranking agencies
             </p>
           </div>
+          </Fade>
         </section>
 
         <section
@@ -64,6 +69,8 @@ export default function About(props) {
           }}
         >
           <div className="bg"></div>
+          <Fade bottom>
+
           <h1>Vision and Mission</h1>
           <div>
             <img src={acesLogo.src} />
@@ -78,6 +85,7 @@ export default function About(props) {
               professionals in the field of computing.
             </p>
           </div>
+          </Fade>
           {/* <Footer /> */}
         </section>
 

@@ -71,7 +71,7 @@ p {
 main {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow:hidden;
   top: 0;
   left: 0;
   position: absolute;
@@ -101,4 +101,10 @@ main.diff {
   //         background: white !important;
   //     }
   // }
+}
+
+@media only screen and (max-width: 1100px){
+  main{
+    overflow: auto;
+  }
 }

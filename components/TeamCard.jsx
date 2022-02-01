@@ -1,7 +1,10 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade';
+
 
 const TeamCard = ({ name, position, image ,link}) => {
   return (
+    <Fade bottom>
     <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
       <div className="h-full flex items-center border-orange-600 border p-4 rounded-lg ">
         <a href={link?link:'#'} target={link && '_blank'} rel="noreferrer" >
@@ -19,6 +22,7 @@ const TeamCard = ({ name, position, image ,link}) => {
         </div>
       </div>
     </div>
+    </Fade>
   )
 }
 

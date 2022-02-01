@@ -2,6 +2,7 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState, useEffect } from 'react'
 import { details } from '../data/faculty'
+
 export default function Faculty() {
     const [index, setIndex] = useState(0)
     const [prevSlide, setprevSlide] = useState({

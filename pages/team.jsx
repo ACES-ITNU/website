@@ -6,6 +6,7 @@ import { DEVELOPER_MEMBERS } from "../data/devloper";
 import TeamCard from "../components/TeamCard";
 import Footer from "../components/Footer";
 import Faculty from "../components/Faculty";
+import Fade from 'react-reveal/Fade';
 
 export default function Team(props) {
   const { active, setactive, menu, setmenu } = props;
@@ -35,8 +36,13 @@ export default function Team(props) {
         }}
       >
         <div className="team">
+     {/* <br></br> */}
+     {/* <br>/</br> */}
           <h1 className="heading">ACES and Nirma University</h1>
+   
           <Faculty />
+       
+      
           <div className="all">
             <div className="teamSection">
               <div className="imagePart part1  flex flex-col items-center justify-center text-center">

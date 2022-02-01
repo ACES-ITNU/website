@@ -7,7 +7,6 @@ import Tilt from 'react-parallax-tilt';
 import graphicImage from '../images/graphic1.png'
 import Footer from '../components/Footer';
 
-
 export default function Home(props) {
   const { active, setactive, menu, setmenu } = props
   useEffect(() => {
@@ -50,7 +49,12 @@ export default function Home(props) {
             </Tilt>
             <div className='tags'>
               <ul>
-                <li><span>Technological Advancements</span></li>
+                <li><span>
+          
+                  Technological Advancements
+             
+                  
+                  </span></li>
                 <li><span>Technical Workshops</span></li>
                 <li><span>Informative Sessions</span></li>
                 <li><span>Fun Events</span></li>
@@ -77,7 +81,7 @@ export default function Home(props) {
             className="graphic" src={graphicImage.src} />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
 
       </main>
       {/* <ul id="pageMenu">
